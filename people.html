@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Cinemalist</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="" />
+    <meta name="copyright" content="(c)">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="favicon.ico" rel="icon" type="image/vnd.microsoft.icon"> -->
+    <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css" />
+    <link rel="stylesheet" href="components/custom-select/chosen.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="global_wrapper">
+    <!-- Begin header -->
+    <header class="header">
+        <div class="container-fluid">
+            <!-- Begin header__logo -->
+            <div class="header__logo">
+                <a href="#" class="cinemalist-logotype">Cinemailist</a>
+            </div>
+            <!-- End header__logo -->
+            <nav class="header__nav">
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Люди</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">База знаний</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Блог</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">О нас</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End header -->
+    <!-- Begin wrapper-main -->
+    <div class="content">
+        <div class="content-body">
+            <!-- BEGIN sort-row -->
+            <div class="sort-row">
+                <div class="sort-by">
+                    <span class="sort-by__text">сортировать по:</span>
+                    <!--"simple-select" - class for customize-->
+                    <select class="simple-select">
+                        <option value="релевантности">релевантности</option>
+                        <option value="дате">дате</option>
+                        <option value="комментариям">комментариям</option>
+                    </select>
+                </div>
+                <div class="people-view">
+                    <a href="#" class="people-view__list js-view-toggle-list">List</a>
+                    <a href="#" class="people-view__table js-view-toggle-table">Table</a>
+                </div>
+            </div>
+            <!-- END sort-row ヽ(•‿•)ノ -->
+            <!-- BEGIN padding-box -->
+            <div class="padding-box minimize-box">
+                <!-- BEGIN views -->
+                <div class="views">
+                    <div class="views__item view--list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="status">Статус</th>
+                                <th>Контактные данные</th>
+                                <th>Специализация</th>
+                                <th>Опыт</th>
+                                <th>Последний проект</th>
+                                <th>Должность в проекте</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--online"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--online"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--offline"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--away"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--away"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--offline"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            <tr>
+                                <td class="status">
+                                    <span class="user__status status--online"></span>
+                                </td>
+                                <td>
+                                    <a href="#" class="user__link">
+                                        <span class="user__name">Екатерина Суливан</span>
+                                        <div class="user__birthdate">
+                                            <p>
+                                                26 лет <span class="full-date">(01 января 1990)</span>, <span
+                                                    class="city">г. Комсомольск-на-Амуре</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>Режиссёр, Режиссёр-постановщик</td>
+                                <td>24 года</td>
+                                <td>NFL Color Rush 2016 Campaing</td>
+                                <td>Режиссёр</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="views__item view--table">
+                        <div class="favorite">
+                            <ul class="favorite__list">
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face1.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--away"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face2.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--offline"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face3.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--online"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face4.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--notdistrub"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face1.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--away"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face2.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--offline"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                                <!-- BEGIN favorite__item -->
+                                <li class="favorite__item">
+                                    <a href="#" class="favorite__people">
+                                        <div class="favorite__image">
+                                            <img src="images/bgs/user-face3.jpg" alt="">
+                                        </div>
+                                        <div class="favorite__info">
+                                            <div class="favorite__header">
+                                                <div class="favorite__name">
+                                                    <span>Екатерина Суливан</span>
+                                                </div>
+                                                <div class="favorite__subinfo">
+                                                    <p>26 лет
+                                                        <span class="full-birthday">(01 января 1990)</span>,
+                                                        <span class="cityname">г. Москва</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="favorite__status">
+                                                <span class="status__text">Готова работать</span>
+                                                <span class="user__status status--offline"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Специализация</span>
+                                                    <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Опыт</span>
+                                                    <span class="favorite__value">4 года</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span class="favorite__char">Последний проект </span>
+                                                    <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                                </li>
+                                                <li>
+                                                    <span class="favorite__char">Должность в проекте </span>
+                                                    <span class="favorite__value">Режиссёр</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END favorite__item ヽ(•‿•)ノ -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- END views ヽ(•‿•)ノ -->
+            </div>
+            <!-- END padding-box ヽ(•‿•)ノ -->
+
+            <!-- Begin footer -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="footer__info">
+                        <div class="footer__logotype">
+                            <a href="#" class="cinemalist-logotype">Cinemailist</a>
+                            <p class="copyright">© 2106 Cinemalist</p>
+                        </div>
+                        <div class="footer__soc">
+                            <p>Мы в социальных сетях</p>
+                            <ul class="social-list">
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link social-inst" target="_blank">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z M25.6432296,20.0000004 C25.6432296,21.5659726 25.0941845,22.8980033 23.9960943,23.9960943 C22.8980042,25.0941845 21.5659726,25.6432296 20.0000004,25.6432296 C18.4340283,25.6432296 17.1019967,25.0941845 16.0039065,23.9960943 C14.9058163,22.8980033 14.3567712,21.5659726 14.3567712,20.0000004 C14.3567712,18.4340274 14.9058163,17.1019967 16.0039065,16.0039065 C17.1019967,14.9058163 18.4340283,14.3567704 20.0000004,14.3567704 C21.5659726,14.3567704 22.8980042,14.9058163 23.9960943,16.0039065 C25.0941845,17.1019967 25.6432296,18.4340274 25.6432296,20.0000004 Z M27.1901049,14.1276038 C27.1901049,14.4904509 27.0611984,14.8007815 26.8033861,15.0585937 C26.545573,15.316406 26.2352433,15.4453126 25.8723962,15.4453126 C25.5095491,15.4453126 25.1992194,15.316406 24.9414063,15.0585937 C24.683594,14.8007815 24.5546883,14.4904509 24.5546883,14.1276038 C24.5546883,13.7647567 24.683594,13.454427 24.9414063,13.1966148 C25.1992194,12.9388016 25.5095491,12.8098959 25.8723962,12.8098959 C26.2352433,12.8098959 26.545573,12.9388016 26.8033861,13.1966148 C27.0611984,13.454427 27.1901049,13.7647567 27.1901049,14.1276038 Z M23.666667,20.0000004 C23.666667,18.9878474 23.3085938,18.1236977 22.5924485,17.4075524 C21.8763023,16.6914062 21.0121535,16.333333 20.0000004,16.333333 C18.9878474,16.333333 18.1236977,16.6914062 17.4075524,17.4075524 C16.6914062,18.1236977 16.3333339,18.9878474 16.3333339,20.0000004 C16.3333339,21.0121526 16.6914062,21.8763023 17.4075524,22.5924476 C18.1236977,23.3085938 18.9878474,23.666667 20.0000004,23.666667 C21.0121535,23.666667 21.8763023,23.3085938 22.5924485,22.5924476 C23.3085938,21.8763023 23.666667,21.0121526 23.666667,20.0000004 Z M20.0000004,10.9765627 C19.9331601,10.9765627 19.567926,10.9741748 18.9042972,10.9694008 C18.2406684,10.9646268 17.7369798,10.9646268 17.3932295,10.9694008 C17.0494793,10.9741748 16.5887592,10.9884977 16.0110675,11.0123694 C15.4333767,11.0362411 14.941623,11.0839845 14.5358074,11.1555988 C14.1299917,11.2272131 13.7886284,11.3155381 13.5117193,11.4205729 C13.0342885,11.6115449 12.6141491,11.8884549 12.251302,12.251302 C11.8884549,12.6141491 11.6115449,13.0342885 11.4205729,13.5117184 C11.3155381,13.7886284 11.2272139,14.1299908 11.1555988,14.5358074 C11.0839845,14.941623 11.0362411,15.4333767 11.0123702,16.0110675 C10.9884985,16.5887583 10.9741757,17.0494793 10.9694008,17.3932295 C10.9646268,17.7369789 10.9646268,18.2406684 10.9694008,18.9042972 C10.9741757,19.5679252 10.9765627,19.9331601 10.9765627,20.0000004 C10.9765627,20.0668407 10.9741757,20.4320748 10.9694008,21.0957036 C10.9646268,21.7593316 10.9646268,22.2630211 10.9694008,22.6067713 C10.9741757,22.9505207 10.9884985,23.4112417 11.0123702,23.9889325 C11.0362411,24.5666233 11.0839845,25.058377 11.1555988,25.4641926 C11.2272139,25.8700092 11.3155381,26.2113716 11.4205729,26.4882816 C11.6115449,26.9657124 11.8884549,27.3858509 12.251302,27.748698 C12.6141491,28.1115451 13.0342885,28.3884551 13.5117193,28.5794271 C13.7886284,28.6844619 14.1299917,28.7727869 14.5358074,28.8444012 C14.941623,28.9160163 15.4333767,28.9637589 16.0110675,28.9876306 C16.5887592,29.0115023 17.0494793,29.0258252 17.3932295,29.0305992 C17.7369798,29.0353732 18.2406684,29.0353732 18.9042972,29.0305992 C19.567926,29.0258252 19.9331601,29.0234382 20.0000004,29.0234382 C20.0668407,29.0234382 20.4320748,29.0258252 21.0957036,29.0305992 C21.7593316,29.0353732 22.2630211,29.0353732 22.6067713,29.0305992 C22.9505216,29.0258252 23.4112417,29.0115023 23.9889325,28.9876306 C24.5666233,28.9637589 25.058377,28.9160163 25.4641935,28.8444012 C25.8700092,28.7727869 26.2113724,28.6844619 26.4882816,28.5794271 C26.9657124,28.3884551 27.3858509,28.1115451 27.748698,27.748698 C28.111546,27.3858509 28.3884551,26.9657124 28.5794279,26.4882816 C28.6844619,26.2113716 28.7727869,25.8700092 28.8444012,25.4641926 C28.9160163,25.058377 28.9637589,24.5666233 28.9876306,23.9889325 C29.0115023,23.4112417 29.0258252,22.9505207 29.0305992,22.6067713 C29.035374,22.2630211 29.035374,21.7593316 29.0305992,21.0957036 C29.0258252,20.4320748 29.0234382,20.0668407 29.0234382,20.0000004 C29.0234382,19.9331601 29.0258252,19.5679252 29.0305992,18.9042972 C29.035374,18.2406684 29.035374,17.7369789 29.0305992,17.3932295 C29.0258252,17.0494793 29.0115023,16.5887583 28.9876306,16.0110675 C28.9637589,15.4333767 28.9160163,14.941623 28.8444012,14.5358074 C28.7727869,14.1299908 28.6844619,13.7886284 28.5794279,13.5117184 C28.3884551,13.0342885 28.111546,12.6141491 27.748698,12.251302 C27.3858509,11.8884549 26.9657124,11.6115449 26.4882816,11.4205729 C26.2113724,11.3155381 25.8700092,11.2272131 25.4641935,11.1555988 C25.058377,11.0839845 24.5666233,11.0362411 23.9889325,11.0123694 C23.4112417,10.9884977 22.9505216,10.9741748 22.6067713,10.9694008 C22.2630211,10.9646268 21.7593316,10.9646268 21.0957036,10.9694008 C20.4320748,10.9741748 20.0668407,10.9765627 20.0000004,10.9765627 Z M31.0000009,20.0000004 C31.0000009,22.1866319 30.9761291,23.7000867 30.9283857,24.5403646 C30.8328997,26.5264761 30.2408861,28.0638026 29.1523447,29.1523439 C28.0638026,30.2408861 26.5264761,30.8328997 24.5403646,30.9283857 C23.7000875,30.9761291 22.1866319,31 20.0000004,31 C17.8133681,31 16.2999133,30.9761291 15.4596354,30.9283857 C13.4735247,30.8328997 11.9361983,30.2408861 10.8476561,29.1523439 C9.75911479,28.0638026 9.16710027,26.5264761 9.07161428,24.5403646 C9.02387171,23.7000867 9,22.1866319 9,20.0000004 C9,17.8133681 9.02387171,16.2999133 9.07161428,15.4596354 C9.16710027,13.4735239 9.75911479,11.9361974 10.8476561,10.8476561 C11.9361983,9.75911393 13.4735247,9.16710027 15.4596354,9.07161428 C16.2999133,9.02387171 17.8133681,9 20.0000004,9 C22.1866319,9 23.7000875,9.02387171 24.5403646,9.07161428 C26.5264761,9.16710027 28.0638026,9.75911393 29.1523447,10.8476561 C30.2408861,11.9361974 30.8328997,13.4735239 30.9283857,15.4596354 C30.9761291,16.2999133 31.0000009,17.8133681 31.0000009,20.0000004 Z"
+                                                  stroke="none" fill="#000000" fill-rule="evenodd" opacity="0.296408582"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link social-fb" target="_blank">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <defs>
+                                                <linearGradient id="inst-gradient">
+                                                    <stop offset="0%" stop-color="#D76650"/>
+                                                    <stop offset="50%" stop-color="#AC5C96"/>
+                                                    <stop offset="100%" stop-color="#6A73B4"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z M24.9753697,10.1385469 L24.9753697,13.1865766 L23.1627152,13.1865766 C22.5007697,13.1865766 22.0543407,13.3251234 21.8234297,13.6022172 C21.5925186,13.8793103 21.4770628,14.294951 21.4770628,14.8491379 L21.4770628,17.0312503 L24.8599138,17.0312503 L24.4096366,20.4487379 L21.4770628,20.4487379 L21.4770628,29.2118228 L17.9441193,29.2118228 L17.9441193,20.4487379 L15,20.4487379 L15,17.0312503 L17.9441193,17.0312503 L17.9441193,14.5143166 C17.9441193,13.0826669 18.3443655,11.9723676 19.1448579,11.1834207 C19.945351,10.3944738 21.0113917,10 22.34298,10 C23.4744455,10 24.351909,10.0461828 24.9753697,10.1385469 Z"
+                                                  stroke="none" fill="#000000" fill-rule="evenodd" opacity="0.300000012"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link social-vk" target="_blank">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z M30.2796053,14.8368015 C30.4417291,15.2879295 29.913064,16.3241137 28.6936088,17.9453541 C28.524436,18.1709181 28.2953478,18.470495 28.0063442,18.8440853 C27.456532,19.5489729 27.1393328,20.0106741 27.0547461,20.2291891 C26.9349154,20.5181926 26.9842575,20.803672 27.2027724,21.0856272 C27.3226032,21.2336529 27.6080825,21.5226571 28.0592105,21.9526379 L28.0697838,21.9526379 L28.0803571,21.9632112 L28.0909303,21.9737851 L28.1120768,21.9949316 C29.105968,22.9183335 29.7791352,23.6972339 30.1315789,24.3316322 C30.1527255,24.3668769 30.1756341,24.410932 30.2003055,24.463799 C30.2249762,24.5166653 30.2496476,24.6100632 30.2743183,24.7439914 C30.2989897,24.8779202 30.2972276,24.997751 30.269032,25.1034842 C30.2408364,25.2092169 30.1527255,25.306139 30.0046992,25.3942499 C29.8566728,25.4823609 29.6487312,25.5264166 29.3808741,25.5264166 L26.6741074,25.5687097 C26.5049339,25.6039537 26.3075655,25.586332 26.0820021,25.5158428 C25.8564381,25.4453541 25.6731672,25.3678164 25.5321899,25.2832303 L25.3207234,25.1563505 C25.1092575,25.0083242 24.8625469,24.7827602 24.5805918,24.4796585 C24.2986373,24.1765575 24.0572131,23.9034135 23.8563204,23.6602272 C23.6554278,23.4170415 23.4404371,23.212624 23.2113488,23.0469754 C22.98226,22.8813268 22.7831295,22.8266983 22.6139566,22.8830895 C22.5928101,22.8901379 22.5646145,22.9024739 22.5293705,22.9200956 C22.4941259,22.9377179 22.4342105,22.9888221 22.3496238,23.0734089 C22.2650377,23.1579956 22.1892621,23.2619661 22.1222977,23.3853217 C22.0553339,23.5086766 21.9954179,23.6919476 21.9425516,23.9351333 C21.8896853,24.1783196 21.866776,24.4514636 21.8738251,24.7545646 C21.8738251,24.8602979 21.8614897,24.95722 21.8368183,25.045331 C21.8121476,25.1334419 21.7857141,25.1986436 21.7575185,25.2409373 L21.7152255,25.2938036 C21.5883457,25.4277324 21.4015505,25.5052695 21.15484,25.5264166 L19.9389097,25.5264166 C19.4384396,25.5546116 18.923872,25.4964583 18.3952069,25.3519569 C17.8665413,25.2074548 17.4030779,25.0206596 17.0048168,24.7915714 C16.6065552,24.5624832 16.2435387,24.3298701 15.9157657,24.0937329 C15.5879933,23.8575956 15.3395206,23.6549409 15.1703478,23.485768 L14.9060149,23.2320084 C14.8355263,23.1615198 14.7386042,23.0557865 14.6152493,22.9148093 C14.4918937,22.773832 14.2398968,22.453108 13.8592575,21.9526379 C13.4786181,21.4521684 13.1050284,20.9199785 12.7384865,20.3560689 C12.3719453,19.7921585 11.9402023,19.0485028 11.4432564,18.1251009 C10.9463112,17.2016983 10.486372,16.2430518 10.0634396,15.2491606 C10.0211465,15.136379 10,15.041219 10,14.9636813 C10,14.8861436 10.0105733,14.8297531 10.0317198,14.7945084 L10.0740128,14.7310689 C10.1797461,14.59714 10.3806394,14.5301756 10.676692,14.5301756 L13.5737781,14.5090291 C13.6583648,14.5231265 13.7394267,14.5460358 13.8169644,14.5777556 C13.8945021,14.6094754 13.9508926,14.6394331 13.9861373,14.6676286 L14.0390036,14.6993484 C14.1517859,14.7768861 14.236372,14.8896684 14.2927632,15.0376948 C14.4337404,15.3901379 14.5958648,15.7549171 14.7791352,16.1320322 C14.9624061,16.5091468 15.1069076,16.7963882 15.2126408,16.9937566 L15.3818137,17.3003825 C15.5862312,17.723315 15.7835996,18.0898562 15.9739189,18.4000063 C16.1642389,18.7101571 16.3351739,18.9515806 16.4867244,19.1242783 C16.6382756,19.2969754 16.7845392,19.4326663 16.9255171,19.5313505 C17.0664943,19.6300348 17.1863251,19.6793769 17.2850093,19.6793769 C17.3836935,19.6793769 17.4788535,19.6617545 17.5704886,19.6265105 C17.5845867,19.6194615 17.6022084,19.6018392 17.6233549,19.5736436 C17.6445021,19.545448 17.6867952,19.467911 17.7502347,19.3410312 C17.8136749,19.2141514 17.8612549,19.0485028 17.8929747,18.8440853 C17.9246945,18.6396684 17.9581764,18.3541891 17.9934211,17.9876478 C18.0286651,17.6211059 18.0286651,17.1805518 17.9934211,16.6659842 C17.9793236,16.3840291 17.9476032,16.1267453 17.8982611,15.8941322 C17.8489189,15.6615198 17.7995768,15.4993954 17.7502347,15.4077602 L17.6867952,15.2808804 C17.5105733,15.041219 17.2109964,14.8896684 16.788064,14.8262282 C16.6964288,14.8121308 16.7140505,14.727544 16.8409303,14.5724693 C16.9607611,14.4385404 17.0946899,14.3328072 17.2427162,14.2552695 C17.6163065,14.0719992 18.4586465,13.9874124 19.7697368,14.0015105 C20.3477446,14.008559 20.8235434,14.0543769 21.1971337,14.1389636 C21.3381109,14.1742076 21.4561796,14.2217876 21.5513389,14.281703 C21.6464989,14.3416183 21.7187497,14.4262051 21.7680918,14.5354625 C21.8174339,14.64472 21.8544406,14.7575017 21.879112,14.8738082 C21.9037827,14.9901148 21.9161181,15.1504764 21.9161181,15.3548939 C21.9161181,15.5593114 21.9125939,15.753155 21.9055448,15.9364259 C21.8984964,16.1196962 21.8896853,16.3681689 21.879112,16.6818438 C21.8685387,16.9955188 21.8632518,17.2862844 21.8632518,17.5541421 C21.8632518,17.6316798 21.8597276,17.7797055 21.8526785,17.9982211 C21.8456295,18.216736 21.8438674,18.3859089 21.8473916,18.5057396 C21.8509164,18.6255703 21.8632518,18.7683103 21.8843983,18.9339583 C21.9055448,19.099607 21.9460758,19.23706 22.0059918,19.3463175 C22.0659072,19.455575 22.1452069,19.5419238 22.2438912,19.605364 C22.3002817,19.6194615 22.3601971,19.633559 22.4236373,19.6476571 C22.4870768,19.6617545 22.5787126,19.6229857 22.6985434,19.5313505 C22.8183741,19.4397154 22.9523023,19.3181219 23.1003286,19.1665714 C23.2483549,19.0150209 23.4316259,18.7788836 23.6501408,18.4581596 C23.8686558,18.1374362 24.1083179,17.758559 24.3691259,17.3215291 C24.7920583,16.5884465 25.1691728,15.795448 25.5004701,14.9425348 C25.5286651,14.8720461 25.5639097,14.8103686 25.6062027,14.7575017 C25.6484964,14.7046354 25.6872653,14.6676286 25.7225093,14.6464821 L25.7648023,14.6147623 C25.7789004,14.6077133 25.7965227,14.5989021 25.8176693,14.5883289 C25.8388158,14.5777556 25.8846337,14.5671823 25.9551223,14.5566091 C26.0256109,14.5460358 26.0960996,14.5442737 26.1665882,14.5513221 L29.2117013,14.5301756 C29.4866074,14.4949316 29.7121707,14.5037428 29.8883926,14.5566091 C30.0646145,14.6094754 30.173872,14.6676286 30.2161657,14.7310689 L30.2796053,14.8368015 Z"
+                                                  stroke="none" fill="#000000" fill-rule="evenodd"
+                                                  opacity="0.300000012"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link social-tw" target="_blank">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z M29.7240262,13.9545455 C29.1801949,14.75 28.5227273,15.42776 27.7516233,15.9878247 C27.7597404,16.1014611 27.7637985,16.2719156 27.7637985,16.4991884 C27.7637985,17.5543833 27.6095782,18.6075484 27.301136,19.6586851 C26.9926945,20.7098211 26.5239447,21.718344 25.8948865,22.6842531 C25.2658276,23.6501622 24.5170458,24.504464 23.6485389,25.2471593 C22.7800327,25.9898538 21.7329542,26.5823862 20.5073055,27.0247564 C19.281656,27.4671265 17.9707789,27.688312 16.5746756,27.688312 C14.375,27.688312 12.3620131,27.0998378 10.5357142,25.9228895 C10.8198051,25.9553571 11.1363636,25.9715913 11.4853898,25.9715913 C13.311688,25.9715913 14.9391236,25.4115258 16.3676945,24.2913964 C15.5154218,24.2751622 14.7524349,24.0133927 14.0787338,23.506088 C13.4050327,22.9987825 12.9423702,22.3514611 12.6907469,21.5641236 C12.9586036,21.6047076 13.2061687,21.625 13.4334415,21.625 C13.7824676,21.625 14.1274349,21.5803571 14.468344,21.4910713 C13.5592531,21.3043833 12.8064124,20.8518669 12.2098211,20.1335229 C11.6132305,19.4151789 11.3149353,18.5811687 11.3149353,17.6314938 L11.3149353,17.582792 C11.8668829,17.8912335 12.4594153,18.0576298 13.0925324,18.0819804 C12.5568182,17.7248378 12.1306822,17.2581171 11.8141236,16.6818182 C11.4975651,16.1055193 11.3392858,15.4805193 11.3392858,14.8068182 C11.3392858,14.0925324 11.5178575,13.4310065 11.875,12.82224 C12.8571425,14.031656 14.0523542,14.9995942 15.4606335,15.7260553 C16.868912,16.4525164 18.3766233,16.8563309 19.9837665,16.9374996 C19.9188313,16.6290582 19.8863636,16.3287338 19.8863636,16.0365258 C19.8863636,14.948864 20.2698865,14.0215098 21.0369316,13.254464 C21.8039775,12.4874189 22.7313309,12.103896 23.8189935,12.103896 C24.9553571,12.103896 25.9131491,12.5178575 26.6923702,13.3457789 C27.5771105,13.1753244 28.4090909,12.8587665 29.188312,12.396104 C28.8879869,13.3295455 28.311688,14.0519484 27.4594153,14.563312 C28.2142858,14.4821425 28.9691556,14.2792211 29.7240262,13.9545455 Z"
+                                                  stroke="none" fill="#000000" fill-rule="evenodd" opacity="0.300000012"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link social-gp" target="_blank">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z M22.8042585,20.0171705 C22.8042585,21.4457415 22.5054948,22.7180634 21.9079668,23.8341348 C21.3104394,24.9502062 20.4587914,25.8224591 19.3530222,26.4508929 C18.2472529,27.0793268 16.9800825,27.393544 15.5515108,27.393544 C14.5281594,27.393544 13.5494505,27.194368 12.6153846,26.7960166 C11.6813188,26.3976646 10.8777471,25.8619508 10.2046702,25.1888738 C9.53159323,24.5157969 8.99587938,23.7122252 8.59752738,22.7781594 C8.199176,21.8440935 8,20.8653846 8,19.8420332 C8,18.8186812 8.199176,17.8399723 8.59752738,16.9059065 C8.99587938,15.9718406 9.53159323,15.1682695 10.2046702,14.4951926 C10.8777471,13.8221157 11.6813188,13.2864012 12.6153846,12.8880492 C13.5494505,12.4896978 14.5281594,12.2905218 15.5515108,12.2905218 C17.5157969,12.2905218 19.2019231,12.9498628 20.6098898,14.268544 L18.5597526,16.236264 C17.7561815,15.4601649 16.7534338,15.0721157 15.5515108,15.0721157 C14.7067311,15.0721157 13.9254806,15.2850277 13.2077612,15.7108517 C12.4900412,16.1366757 11.9217034,16.7153157 11.5027471,17.4467717 C11.0837914,18.1782283 10.8743132,18.9766486 10.8743132,19.8420332 C10.8743132,20.7074178 11.0837914,21.5058382 11.5027471,22.2372942 C11.9217034,22.9687502 12.4900412,23.5473902 13.2077612,23.9732142 C13.9254806,24.3990388 14.7067311,24.6119508 15.5515108,24.6119508 C16.1215662,24.6119508 16.6452609,24.5329668 17.1225963,24.375 C17.5999311,24.2170332 17.9931317,24.0195742 18.3021975,23.7826234 C18.611264,23.5456732 18.8808382,23.2760991 19.1109206,22.9739009 C19.3410025,22.6717034 19.509272,22.3866757 19.615728,22.1188185 C19.722184,21.8509618 19.7960166,21.5968406 19.8372252,21.356456 L15.5515108,21.356456 L15.5515108,18.7603022 L22.680632,18.7603022 C22.7630492,19.1929945 22.8042585,19.6119508 22.8042585,20.0171705 Z M31.736264,18.7603022 L31.736264,20.9237637 L29.5831046,20.9237637 L29.5831046,23.0769231 L27.4196431,23.0769231 L27.4196431,20.9237637 L25.2664837,20.9237637 L25.2664837,18.7603022 L27.4196431,18.7603022 L27.4196431,16.6071428 L29.5831046,16.6071428 L29.5831046,18.7603022 L31.736264,18.7603022 Z"
+                                                  stroke="none" fill="#000000" fill-rule="evenodd" opacity="0.300000012"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Begin footer__nav -->
+                    <div class="footer__nav">
+                        <ul class="navigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Люди</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">База знаний</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Блог</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">О нас</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End footer__nav -->
+                    <!-- Begin footer__additional -->
+                    <div class="footer__additional">
+                        <div class="footer__develop-by">
+                            <a href="#" class="develop-by__link">Дизайн и разработка <span>Yoldi.ru</span></a>
+                        </div>
+                        <div class="footer__documents">
+                            <ul>
+                                <li>
+                                    <a href="#">Политика конфидециальности</a>
+                                </li>
+                                <li>
+                                    <a href="#">Пользовательское соглашение</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End footer__additional -->
+                </div>
+            </footer>
+            <!-- End footer -->
+        </div>
+        <!-- Begin content-aside -->
+        <div class="content-aside">
+            <div class="container-fluid aside">
+
+                <!-- Begin account-section -->
+                <div class="account-section">
+                    <!-- Begin account__user -->
+                    <div class="account__user">
+                        <div class="user__picture">
+                            <a href="#" class="user__link">
+                                <img src="images/bgs/account-face.png" alt="">
+                                <span class="user__status status--away"></span>
+                                <!--<span class="user__status status--online"></span>-->
+                                <!--<span class="user__status status--notdistrub"></span>-->
+                                <!--<span class="user__status status--offline"></span>-->
+                            </a>
+                        </div>
+                        <div class="user__info">
+                            <div class="user__statusinfo">
+                                <span>Мой статус:</span>
+                                <p>Рассмотрю предложения</p>
+                            </div>
+
+                            <a href="#" class="account__exit">Выйти</a>
+                        </div>
+                    </div>
+                    <!-- End account__user -->
+
+                    <div class="account__actions">
+                        <div class="action__item action--favorite">
+                            <a href="#" class="account__link">
+                                <div class="action__icon">
+                                    <svg width="27px" height="24px" viewBox="37 13 27 24" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="heart-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                           transform="translate(37.000000, 13.000000)">
+                                            <path d="M24.7619049,7.59920622 C24.7619049,6.79563467 24.6552578,6.08630933 24.4419644,5.47123022 C24.2286702,4.85615111 23.9558533,4.36755911 23.623512,4.005456 C23.2911707,3.64335289 22.8869049,3.34821422 22.4107147,3.12004 C21.9345236,2.89186489 21.4682542,2.73809511 21.0119049,2.65872978 C20.5555556,2.57936533 20.0694444,2.53968267 19.5535716,2.53968267 C19.0376987,2.53968267 18.4821431,2.66617067 17.8869049,2.91914667 C17.2916667,3.17212267 16.743552,3.48958311 16.2425591,3.871528 C15.7415671,4.253472 15.3124996,4.61061511 14.9553573,4.94295644 C14.5982142,5.27529778 14.3005956,5.58035733 14.0624996,5.85813511 C13.8839289,6.07638933 13.6408729,6.18551556 13.3333333,6.18551556 C13.0257938,6.18551556 12.7827378,6.07638933 12.6041671,5.85813511 C12.3660711,5.58035733 12.0684524,5.27529778 11.7113093,4.94295644 C11.3541671,4.61061511 10.9250996,4.253472 10.4241076,3.871528 C9.92311467,3.48958311 9.375,3.17212267 8.77976178,2.91914667 C8.18452356,2.66617067 7.628968,2.53968267 7.11309511,2.53968267 C6.59722222,2.53968267 6.11111111,2.57936533 5.65476178,2.65872978 C5.19841244,2.73809511 4.73214311,2.89186489 4.255952,3.12004 C3.77976178,3.34821422 3.375496,3.64335289 3.04315467,4.005456 C2.71081333,4.36755911 2.43799644,4.85615111 2.22470222,5.47123022 C2.01140889,6.08630933 1.90476178,6.79563467 1.90476178,7.59920622 C1.90476178,9.26587289 2.83234133,11.0267858 4.68750044,12.8819449 L13.3333333,21.2152782 L21.9642853,12.8968258 C23.8293653,11.0317458 24.7619049,9.26587289 24.7619049,7.59920622 L24.7619049,7.59920622 Z M26.6666667,7.59920622 C26.6666667,9.79166667 25.5307538,12.0238098 23.2589289,14.2956347 L13.9880951,23.2242062 C13.8095236,23.4027778 13.5912702,23.4920631 13.3333333,23.4920631 C13.0753964,23.4920631 12.8571431,23.4027778 12.6785716,23.2242062 L3.39285689,14.2658729 C3.29365067,14.1865076 3.15724178,14.0575396 2.98363111,13.878968 C2.81001956,13.7003964 2.53472178,13.375496 2.15773778,12.9042658 C1.78075378,12.4330356 1.44345244,11.9494044 1.14583289,11.4533733 C0.848214222,10.9573413 0.582837333,10.3571431 0.349702222,9.65277778 C0.116567111,8.94841244 0,8.26388889 0,7.59920622 C0,5.41666667 0.62996,3.71031733 1.88988089,2.48015911 C3.14980178,1.25 4.89087289,0.634920889 7.11309511,0.634920889 C7.72817422,0.634920889 8.35565511,0.741567111 8.995536,0.954861333 C9.63541689,1.16815467 10.2306551,1.45585333 10.7812498,1.81795644 C11.3318453,2.18005956 11.8055556,2.51984089 12.2023813,2.83730133 C12.5992062,3.15476178 12.9761902,3.49206311 13.3333333,3.84920622 C13.6904764,3.49206311 14.0674604,3.15476178 14.4642853,2.83730133 C14.8611111,2.51984089 15.3348213,2.18005956 15.8854169,1.81795644 C16.4360116,1.45585333 17.0312498,1.16815467 17.6711307,0.954861333 C18.3110116,0.741567111 18.9384924,0.634920889 19.5535716,0.634920889 C21.7757938,0.634920889 23.5168649,1.25 24.7767858,2.48015911 C26.0367067,3.71031733 26.6666667,5.41666667 26.6666667,7.59920622 L26.6666667,7.59920622 Z"
+                                                  fill="#FFFFFF"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <span class="action__value">Моё избранное</span>
+                            </a>
+                        </div>
+                        <div class="action__item action--notification">
+                            <a href="#" class="account__link">
+                                <div class="action__icon">
+                                    <svg width="24px" height="26px" viewBox="38 12 24 26" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="bell-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                           transform="translate(38.000000, 12.000000)">
+                                            <path d="M11.9665897,24.052995 C11.9665897,23.9032258 11.8917047,23.8283408 11.7419355,23.8283408 C11.1896603,23.8283408 10.7146101,23.6294282 10.3167841,23.231603 C9.9189589,22.833777 9.72004632,22.3587268 9.72004632,21.8064516 C9.72004632,21.6566824 9.64516129,21.5817974 9.49539206,21.5817974 C9.345622,21.5817974 9.27073697,21.6566824 9.27073697,21.8064516 C9.27073697,22.4897752 9.5117729,23.072473 9.99384394,23.5545432 C10.4759141,24.0366142 11.0586119,24.2776501 11.7419355,24.2776501 C11.8917047,24.2776501 11.9665897,24.2027651 11.9665897,24.052995 L11.9665897,24.052995 Z M2.61535174,20.0092167 L20.8685192,20.0092167 C18.3785999,17.2010372 17.1336402,13.3070273 17.1336402,8.32718858 C17.1336402,7.84979839 17.0213135,7.35836735 16.7966592,6.85289465 C16.572005,6.34742194 16.249064,5.86535174 15.8278372,5.40668239 C15.4066103,4.94801303 14.8379534,4.57124871 14.1218681,4.27638942 C13.405782,3.98153097 12.6124708,3.83410174 11.7419355,3.83410174 C10.8714001,3.83410174 10.078089,3.98153097 9.36200284,4.27638942 C8.64591755,4.57124871 8.07726065,4.94801303 7.65603381,5.40668239 C7.23480697,5.86535174 6.911866,6.34742194 6.68721174,6.85289465 C6.46255748,7.35836735 6.35023077,7.84979839 6.35023077,8.32718858 C6.35023077,13.3070273 5.1052711,17.2010372 2.61535174,20.0092167 L2.61535174,20.0092167 Z M23.4239628,20.0092167 C23.4239628,20.4959677 23.2461119,20.9171946 22.8904092,21.2728972 C22.5347066,21.6285999 22.1134789,21.8064516 21.6267279,21.8064516 L15.3364053,21.8064516 C15.3364053,22.7986754 14.9853835,23.645809 14.2833382,24.3478543 C13.5812929,25.0498996 12.7341592,25.4009214 11.7419355,25.4009214 C10.7497117,25.4009214 9.90257806,25.0498996 9.20053277,24.3478543 C8.49848748,23.645809 8.14746568,22.7986754 8.14746568,21.8064516 L1.8571431,21.8064516 C1.37039206,21.8064516 0.949164387,21.6285999 0.593461742,21.2728972 C0.237759097,20.9171946 0.0599081935,20.4959677 0.0599081935,20.0092167 C0.527937548,19.6160715 0.953845226,19.2042047 1.33762955,18.7736179 C1.72141387,18.3430302 2.11923987,17.7837341 2.53110587,17.0957305 C2.94297271,16.4077261 3.29165452,15.6658983 3.57715297,14.8702479 C3.86265142,14.0745968 4.09666652,13.1104547 4.27919826,11.9778226 C4.46172916,10.8451905 4.55299503,9.62831245 4.55299503,8.32718858 C4.55299503,6.904378 5.10059026,5.58219329 6.19578071,4.36063529 C7.29097032,3.13907729 8.72782258,2.39724948 10.5063366,2.13515271 C10.4314516,1.95730097 10.3940091,1.77476923 10.3940091,1.58755748 C10.3940091,1.213134 10.5250575,0.894873032 10.7871543,0.632776258 C11.049251,0.370679484 11.3675112,0.239631097 11.7419355,0.239631097 C12.1163598,0.239631097 12.4346199,0.370679484 12.6967167,0.632776258 C12.9588135,0.894873032 13.0898619,1.213134 13.0898619,1.58755748 C13.0898619,1.77476923 13.0524194,1.95730097 12.9775343,2.13515271 C14.7560484,2.39724948 16.1929006,3.13907729 17.2880903,4.36063529 C18.3832807,5.58219329 18.9308759,6.904378 18.9308759,8.32718858 C18.9308759,9.62831245 19.0221418,10.8451905 19.2046727,11.9778226 C19.3872045,13.1104547 19.6212195,14.0745968 19.906718,14.8702479 C20.1922165,15.6658983 20.5408983,16.4077261 20.9527651,17.0957305 C21.3646311,17.7837341 21.7624571,18.3430302 22.1462414,18.7736179 C22.5300257,19.2042047 22.9559334,19.6160715 23.4239628,20.0092167 L23.4239628,20.0092167 Z"
+                                                  fill="#FFFFFF"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <span class="action__value">Моё избранное</span>
+
+                                <!-- Begin notification-value -->
+                                <div class="notification-value js-little-popup">
+                                    <i>22</i>
+
+                                    <div class="notification-popup">
+                                        <p>Отметить просмотренными</p>
+                                    </div>
+                                </div>
+                                <!-- End notification-value -->
+
+                            </a>
+                        </div>
+                        <div class="action__item action--views">
+                            <a href="#" class="account__link">
+                                <div class="action__icon">
+                                    <svg width="27px" height="18px" viewBox="37 16 27 18" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="eye" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                           transform="translate(37.000000, 16.000000)">
+                                            <path d="M25.0714287,9.0642861 C23.5446426,6.69375 21.6311382,4.9208706 19.3309155,3.745647 C19.9436382,4.7902905 20.25,5.9203125 20.25,7.1357139 C20.25,8.9939736 19.5895647,10.5835383 18.2686941,11.9044089 C16.9478235,13.2252786 15.3582588,13.8857139 13.5,13.8857139 C11.6417412,13.8857139 10.0521765,13.2252786 8.7313059,11.9044089 C7.4104353,10.5835383 6.75,8.9939736 6.75,7.1357139 C6.75,5.9203125 7.0563618,4.7902905 7.6690845,3.745647 C5.3688618,4.9208706 3.4553574,6.69375 1.9285713,9.0642861 C3.2645088,11.1234375 4.9394529,12.7632258 6.9534036,13.9836492 C8.9673552,15.2040735 11.1495537,15.8142861 13.5,15.8142861 C15.8504463,15.8142861 18.0326448,15.2040735 20.0465964,13.9836492 C22.0605471,12.7632258 23.7354912,11.1234375 25.0714287,9.0642861 L25.0714287,9.0642861 Z M14.2232139,3.2785713 C14.2232139,3.0776787 14.1529014,2.9069199 14.0122764,2.7662949 C13.8716514,2.6256699 13.7008926,2.5553574 13.5,2.5553574 C12.2444199,2.5553574 11.1671316,3.0048552 10.268136,3.9038508 C9.3691404,4.8028464 8.9196426,5.8801338 8.9196426,7.1357139 C8.9196426,7.3366074 8.9899551,7.5073662 9.1305801,7.6479912 C9.2712051,7.7886162 9.4419639,7.8589287 9.6428574,7.8589287 C9.84375,7.8589287 10.0145088,7.7886162 10.1551338,7.6479912 C10.2957588,7.5073662 10.3660713,7.3366074 10.3660713,7.1357139 C10.3660713,6.271875 10.6724331,5.5335942 11.2851558,4.9208706 C11.8978794,4.308147 12.6361611,4.0017861 13.5,4.0017861 C13.7008926,4.0017861 13.8716514,3.9314736 14.0122764,3.7908486 C14.1529014,3.6502236 14.2232139,3.4794639 14.2232139,3.2785713 L14.2232139,3.2785713 Z M27,9.0642861 C27,9.4058037 26.8995537,9.7523442 26.6986611,10.1039058 C25.2924111,12.4141743 23.4015066,14.2648992 21.0259485,15.6560823 C18.6503904,17.0472654 16.1417412,17.7428574 13.5,17.7428574 C10.8582588,17.7428574 8.3496096,17.0447544 5.9740515,15.6485493 C3.5984934,14.2523442 1.7075889,12.4041294 0.3013389,10.1039058 C0.1004463,9.7523442 0,9.4058037 0,9.0642861 C0,8.7227676 0.1004463,8.376228 0.3013389,8.0246655 C1.7075889,5.7244419 3.5984934,3.876228 5.9740515,2.480022 C8.3496096,1.0838169 10.8582588,0.3857139 13.5,0.3857139 C16.1417412,0.3857139 18.6503904,1.0838169 21.0259485,2.480022 C23.4015066,3.876228 25.2924111,5.7244419 26.6986611,8.0246655 C26.8995537,8.376228 27,8.7227676 27,9.0642861 L27,9.0642861 Z"
+                                                  fill="#FFFFFF"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <span class="action__value">Меня смотрели</span>
+                                <span class="notification-value">15</span>
+
+                                <!-- Begin notification-value -->
+                                <div class="notification-value js-little-popup">
+                                    <i>22</i>
+
+                                    <div class="notification-popup">
+                                        <p>Отметить просмотренными</p>
+                                    </div>
+                                </div>
+                                <!-- End notification-value -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End account-section -->
+
+                <!-- Begin aside-search -->
+                <div class="aside-search">
+                    <div class="aside-search__title">
+                        <p>Искать специалистов:</p>
+                    </div>
+                    <div class="aside-search__body">
+                        <form method="POST" action="/">
+                            <div class="input-group">
+                                <input type="text" placeholder="Ключевое слово">
+                            </div>
+                            <div class="input-group">
+                                <select class="custom-it">
+                                    <option value="Выберите цех" disabled selected>Выберите цех</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <select class="custom-it">
+                                    <option value="Выберите цех" disabled selected>Выберите цех</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <select class="custom-it">
+                                    <option value="Выберите цех" disabled selected>Выберите город</option>
+                                    <option value="Санкт-Питербург">Санкт-Питербург</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Екатеренбург">Екатеренбург</option>
+                                </select>
+                            </div>
+                            <!-- Begin additional-group -->
+                            <div class="additional-group">
+                                <!--add to parent(additional-group .is-open class) and toggle extended-group-->
+                                <div class="extended-group">
+                                    <!-- Begin checkbox-group -->
+                                    <div class="checkbox-group">
+                                        <p>Статус</p>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Свободен</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Рассмотрю предложения</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Занят</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Не определён</span>
+                                        </label>
+                                    </div>
+                                    <!-- End checkbox-group -->
+                                    <!-- Begin checkbox-group -->
+                                    <div class="checkbox-group">
+                                        <p>Готовность к командировкам</p>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Не готов</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Готов до 1 месяца</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">от 1 до 3 месяцев</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Более 3 месяцев</span>
+                                        </label>
+                                    </div>
+                                    <!-- End checkbox-group -->
+                                    <!-- Begin checkbox-group -->
+                                    <div class="checkbox-group">
+                                        <p>Условия сотрудничества</p>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Коммерция</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Повышение квалификации</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Студенческий проект</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Благотворительность</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">TFP (для портфолио)</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Другое</span>
+                                        </label>
+                                    </div>
+                                    <!-- End checkbox-group -->
+                                    <!-- Begin checkbox-group -->
+                                    <div class="checkbox-group">
+                                        <p>Опыт работы</p>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">Нет опыта</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">от 1 года до 3 лет</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">от 3 до 6 лет</span>
+                                        </label>
+                                        <label class="checkbox-wrap">
+                                            <input type="checkbox" value="some-value">
+                                            <span class="checkbox-square">более 6 лет</span>
+                                        </label>
+                                    </div>
+                                    <!-- End checkbox-group -->
+                                </div>
+                                <a href="#" class="js-extended-search simple-link">Рассширенный поиск</a>
+                            </div>
+                            <!-- End additional-group -->
+                            <input type="submit" class="button button--transparent-yellow" value="Искать">
+                        </form>
+                    </div>
+                </div>
+                <!-- End aside-search -->
+            </div>
+        </div>
+        <!-- End content-aside -->
+    </div>
+    <!-- End wrapper-main -->
+</div>
+<!--[if lt IE 9]>
+<script src="components/html5shiv/es5-shim.min.js"></script>
+<script src="components/html5shiv/html5shiv.min.js"></script>
+<script src="components/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="components/respond/respond.min.js"></script>
+<![endif]-->
+<!-- Load Scripts -->
+<script src="components/modernizr/modernizr.js" type="text/javascript"></script>
+<script src="components/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="components/custom-select/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="components/custom-tooltips/tipso.min.js" type="text/javascript"></script>
+<script src="assets/js/common.js" type="text/javascript"></script>
+</body>
+
+</html>
