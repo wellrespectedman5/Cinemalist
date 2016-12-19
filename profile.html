@@ -9,26 +9,25 @@
 <html lang="ru">
 <!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Cinemalist</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
     <meta name="copyright" content="(c)">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="format-detection" content="address=no" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!-- <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="favicon.ico" rel="icon" type="image/vnd.microsoft.icon"> -->
-    <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css" />
-    <link rel="stylesheet" href="components/custom-select/chosen.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css"/>
+    <link rel="stylesheet" href="components/custom-select/chosen.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
 <body>
 <div class="global_wrapper">
@@ -64,12 +63,152 @@
     <!-- End header -->
     <!-- Begin wrapper-main -->
     <div class="content">
-        <div class="content-body">
+        <!-- could be daily and nightly-->
+        <div class="content-body" data-default-blurmode="daily">
             <!-- BEGIN profile -->
             <section class="profile">
+                <!-- BEGIN profile__header -->
                 <div class="profile__header">
-                    123
+                    <!-- BEGIN profile__photo -->
+                    <div class="profile__photo">
+                        <div class="profile__picture">
+                            <div class="picture-wrap">
+                                <img src="images/ic/profile-photo.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="profile__status">
+                            Рассмотрю предложения
+                            <span class="user__status status--away"></span>
+                        </div>
+                        <div class="profile__modes">
+                            <a href="#" class="profile_mode profile_mode--daily">
+                                <svg width="17" height="18" viewBox="0 0 17 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.234 8.995c0-.784-.15-1.533-.453-2.246a5.818 5.818 0 0 0-1.224-1.85 5.757 5.757 0 0 0-1.832-1.236A5.56 5.56 0 0 0 8.5 3.206a5.56 5.56 0 0 0-2.225.457A5.757 5.757 0 0 0 4.443 4.9 5.818 5.818 0 0 0 3.22 6.75a5.705 5.705 0 0 0-.453 2.246c0 .784.15 1.533.453 2.246.302.714.71 1.33 1.224 1.85.514.519 1.125.93 1.832 1.236a5.56 5.56 0 0 0 2.225.457 5.56 5.56 0 0 0 2.225-.457 5.757 5.757 0 0 0 1.832-1.237 5.818 5.818 0 0 0 1.224-1.849 5.705 5.705 0 0 0 .453-2.246zm2.748 2.784a.277.277 0 0 1-.199.2l-2.907.966v3.075a.316.316 0 0 1-.13.261c-.099.067-.195.08-.288.04l-2.907-.944-1.792 2.492A.31.31 0 0 1 8.5 18a.31.31 0 0 1-.259-.13L6.45 15.376l-2.907.945c-.093.04-.19.026-.289-.04a.316.316 0 0 1-.13-.262v-3.075L.218 11.98a.277.277 0 0 1-.2-.201c-.032-.114-.02-.211.04-.292L1.85 8.995.058 6.503a.322.322 0 0 1-.04-.292.277.277 0 0 1 .199-.201l2.907-.965V1.97c0-.107.043-.194.13-.261.099-.067.195-.08.288-.04l2.907.944L8.241.121C8.301.04 8.387 0 8.5 0c.113 0 .2.04.259.12l1.792 2.493 2.907-.945c.093-.04.19-.026.289.04.086.068.13.155.13.262v3.075l2.906.965c.106.034.173.1.2.201a.322.322 0 0 1-.04.292L15.15 8.995l1.792 2.492c.06.08.073.178.04.292z"
+                                          fill="#000" fill-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="profile_mode profile_mode--nightly">
+                                <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.873 12.237a6.671 6.671 0 0 1-1.122.094 6.616 6.616 0 0 1-3.438-.938A6.854 6.854 0 0 1 5.814 8.84a6.99 6.99 0 0 1-.918-3.513c0-1.334.354-2.574 1.06-3.72-1.366.416-2.483 1.212-3.35 2.386-.867 1.174-1.3 2.508-1.3 4.002 0 .904.173 1.767.52 2.59.347.824.81 1.532 1.392 2.127A6.585 6.585 0 0 0 5.3 14.134a6.23 6.23 0 0 0 2.535.532c.979 0 1.909-.214 2.79-.641a6.527 6.527 0 0 0 2.249-1.788zm2.07-.886a7.822 7.822 0 0 1-2.892 3.383A7.543 7.543 0 0 1 7.834 16a7.482 7.482 0 0 1-3.04-.636 7.895 7.895 0 0 1-2.499-1.71 8.089 8.089 0 0 1-1.673-2.553A7.934 7.934 0 0 1 0 7.995c0-1.063.196-2.08.587-3.048a7.952 7.952 0 0 1 1.59-2.518A7.801 7.801 0 0 1 4.58.715 7.657 7.657 0 0 1 7.538 0c.3-.014.507.122.622.406.123.285.072.535-.153.75A5.54 5.54 0 0 0 6.666 3.05a5.702 5.702 0 0 0-.464 2.277c0 1.028.248 1.977.744 2.845a5.593 5.593 0 0 0 2.02 2.064c.85.507 1.778.761 2.785.761.802 0 1.577-.177 2.325-.532.279-.125.524-.08.735.136a.651.651 0 0 1 .178.354.683.683 0 0 1-.046.396z"
+                                          fill="#000" fill-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END profile__photo ヽ(•‿•)ノ -->
+                    <div class="profile__userinfo">
+                        <div class="userinfo__header">
+                            <div class="profile__main">
+                                <h1>Елена Панина</h1>
+                                <p>31 год (22 ноября 1984), г. Санкт-Петербург</p>
+                            </div>
+                            <div class="profile__actions">
+                                <a href="#" class="profile-action profile-action--like"
+                                   data-tooltip-pos='bottom'
+                                   data-tooltip="Добавить в избранное">
+                                    <svg width="23px" height="20px" viewBox="1291 120 23 20" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                           transform="translate(1291.000000, 120.000000)">
+                                            <path d="M20.6349207,6.33267185 C20.6349207,5.66302889 20.5460481,5.07192444 20.3683037,4.55935852 C20.1905585,4.04679259 19.9632111,3.63963259 19.68626,3.33788 C19.4093089,3.03612741 19.0724207,2.79017852 18.6755956,2.60003333 C18.2787696,2.40988741 17.8902119,2.28174593 17.5099207,2.21560815 C17.1296296,2.14947111 16.724537,2.11640222 16.294643,2.11640222 C15.8647489,2.11640222 15.4017859,2.22180889 14.9057541,2.43262222 C14.4097222,2.64343556 13.95296,2.90798593 13.5354659,3.22627333 C13.1179726,3.54456 12.7604163,3.84217926 12.4627978,4.11913037 C12.1651785,4.39608148 11.917163,4.65029778 11.7187496,4.88177926 C11.5699407,5.06365778 11.3673941,5.1545963 11.1111111,5.1545963 C10.8548281,5.1545963 10.6522815,5.06365778 10.5034726,4.88177926 C10.3050593,4.65029778 10.0570437,4.39608148 9.75942444,4.11913037 C9.46180593,3.84217926 9.10424963,3.54456 8.6867563,3.22627333 C8.26926222,2.90798593 7.8125,2.64343556 7.31646815,2.43262222 C6.8204363,2.22180889 6.35747333,2.11640222 5.92757926,2.11640222 C5.49768519,2.11640222 5.09259259,2.14947111 4.71230148,2.21560815 C4.33201037,2.28174593 3.94345259,2.40988741 3.54662667,2.60003333 C3.14980148,2.79017852 2.81291333,3.03612741 2.53596222,3.33788 C2.25901111,3.63963259 2.0316637,4.04679259 1.85391852,4.55935852 C1.67617407,5.07192444 1.58730148,5.66302889 1.58730148,6.33267185 C1.58730148,7.72156074 2.36028444,9.18898815 3.90625037,10.7349541 L11.1111111,17.6793985 L18.3035711,10.7473548 C19.8578044,9.19312148 20.6349207,7.72156074 20.6349207,6.33267185 L20.6349207,6.33267185 Z M22.2222222,6.33267185 C22.2222222,8.15972222 21.2756281,10.0198415 19.3824407,11.9130289 L11.6567459,19.3535052 C11.5079363,19.5023148 11.3260585,19.5767193 11.1111111,19.5767193 C10.8961637,19.5767193 10.7142859,19.5023148 10.5654763,19.3535052 L2.82738074,11.8882274 C2.74470889,11.8220896 2.63103481,11.7146163 2.48635926,11.5658067 C2.34168296,11.416997 2.11226815,11.1462467 1.79811481,10.7535548 C1.48396148,10.360863 1.20287704,9.95783704 0.954860741,9.54447778 C0.706845185,9.13111778 0.485697778,8.63095259 0.291418519,8.04398148 C0.0971392593,7.45701037 0,6.88657407 0,6.33267185 C0,4.51388889 0.524966667,3.09193111 1.57490074,2.06679926 C2.62483481,1.04166667 4.07572741,0.529100741 5.92757926,0.529100741 C6.44014519,0.529100741 6.96304593,0.617972593 7.49628,0.795717778 C8.02951407,0.973462222 8.52554593,1.21321111 8.98437481,1.5149637 C9.44320444,1.8167163 9.83796296,2.09986741 10.1686511,2.36441778 C10.4993385,2.62896815 10.8134919,2.91005259 11.1111111,3.20767185 C11.4087304,2.91005259 11.7228837,2.62896815 12.0535711,2.36441778 C12.3842593,2.09986741 12.7790178,1.8167163 13.2378474,1.5149637 C13.6966763,1.21321111 14.1927081,0.973462222 14.7259422,0.795717778 C15.2591763,0.617972593 15.782077,0.529100741 16.294643,0.529100741 C18.1464948,0.529100741 19.5973874,1.04166667 20.6473215,2.06679926 C21.6972556,3.09193111 22.2222222,4.51388889 22.2222222,6.33267185 L22.2222222,6.33267185 Z"
+                                                  fill="#000000"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="#" class="profile-action profile-action--repost"
+                                   data-tooltip-pos='bottom'
+                                   data-tooltip="Поделиться анкетой">
+                                    <svg width="20px" height="20px" viewBox="1344 120 20 20" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none"
+                                           fill-rule="evenodd" transform="translate(1344.000000, 120.000000)">
+                                            <path d="M14.2945455,5.9025 C14.8278788,6.31875 15.489697,6.5675 16.209697,6.5675 C17.9684848,6.5675 19.3939394,5.0975 19.3939394,3.28375 C19.3939394,1.47 17.9684848,0 16.209697,0 C14.4521212,0 13.0254545,1.47 13.0254545,3.28375 L13.0254545,3.28625 L5.16606061,7.205 C4.62181818,6.7575 3.93333333,6.4875 3.18424242,6.4875 C1.42545455,6.4875 0,7.95875 0,9.77125 C0,11.58375 1.42545455,13.055 3.18424242,13.055 C3.81939394,13.055 4.41090909,12.86 4.90787879,12.53 L13.0266667,16.5775 L13.0266667,16.58 C13.0266667,18.39375 14.4521212,19.86375 16.2109091,19.86375 C17.969697,19.86375 19.3951515,18.39375 19.3951515,16.58 C19.3951515,14.76625 17.969697,13.29625 16.2109091,13.29625 C15.4909091,13.29625 14.8290909,13.545 14.2957576,13.96125 L6.35636364,10.00375 C6.36,9.95375 6.36242424,9.905 6.36363636,9.855 L14.2945455,5.9025 Z"
+                                                  fill="#000000"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="#" class="profile-action profile-action--download"
+                                   data-tooltip-pos='bottom'
+                                   data-tooltip="Скачать анкету как *.pdf">
+                                    <svg width="16px" height="21px" viewBox="1394 120 16 21" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none"
+                                           fill-rule="evenodd" transform="translate(1394.000000, 120.000000)">
+                                            <path d="M8,14.6666667 L14.6666667,8 L10.6666667,8 L10.6666667,0 L5.33333333,0 L5.35733333,8 L1.33333333,8 L8,14.6666667 Z M0,17.3333333 L0,20 L16,20 L16,17.3333333 L16,14.6666667 L13.3333333,14.6666667 L13.3333333,17.3333333 L2.66666667,17.3333333 L2.66666667,14.6666667 L0,14.6666667 L0,17.3333333 Z"
+                                                  fill="#000000"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- BEGIN userinfo__body -->
+                        <div class="userinfo__body">
+                            <ul>
+                                <li>
+                                    <span class="favorite__char">Специализация</span>
+                                    <span class="favorite__value">Режиссёр, режиссёр-постановщик, исполнительный продюсер </span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Сфера деятельности</span>
+                                    <span class="favorite__value">Докумантальные фильмы, Сериалы</span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Опыт работы</span>
+                                    <span class="favorite__value">6 лет</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="favorite__char">Готовность к командировкам</span>
+                                    <span class="favorite__value">Не более месяца</span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Условия сотрудничества</span>
+                                    <span class="favorite__value">Коммерческая работа</span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Портфолио</span>
+                                    <span class="favorite__value">
+                                        <a href="http://photo.ru" target="_blank">photo.ru</a>,
+                                        <a href="http://vimeo.com/elena" target="_blank">vimeo.com/elena</a></span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Образование:</span>
+                                    <span class="favorite__value">ВГИК, Кинооператорский специальность: Кинооператор</span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Знание языков:</span>
+                                    <span class="favorite__value">
+                                        1. Английский (свободно) <br>
+                                        2. Немецкий (читаю техническую литературу) <br>
+                                        3. Французский (читаю со словарём)</span>
+                                </li>
+                                <li>
+                                    <span class="favorite__char">Дополнительно:</span>
+                                    <span class="favorite__value">Водительские права (Категория A, B) Личный автомобиль</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END userinfo__body ヽ(•‿•)ノ -->
+                    </div>
                 </div>
+                <div class="profile__buttons">
+                    <a href="#" class="button button--black js-profile-phone">Показать телефон</a>
+                    <a href="#" class="simple-link js-write-letter">Написать письмо</a>
+                    <a href="#" class="profile-edit-link js-profile-edit">Редактировать профиль
+                        <i class="pencil-icon">
+                            <svg width="12px" height="12px" viewBox="1398 491 12 12" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                   transform="translate(1398.000000, 491.000000)">
+                                    <path d="M2.80477338,10.9095125 L3.50789815,10.2063872 L1.69213615,8.39062523 L0.989010923,9.09375 L0.989010923,9.92050154 L1.97802185,9.92050154 L1.97802185,10.9095125 L2.80477338,10.9095125 Z M6.84581031,3.73918246 C6.84581031,3.62585862 6.78914815,3.56919646 6.67582431,3.56919646 C6.62431338,3.56919646 6.58052862,3.58722508 6.54447138,3.62328277 L2.35662785,7.81112631 C2.32057015,7.847184 2.30254108,7.89096831 2.30254108,7.94247923 C2.30254108,8.05580354 2.35920323,8.11246569 2.47252754,8.11246569 C2.52403846,8.11246569 2.56782277,8.09443662 2.60388046,8.05837892 L6.791724,3.87053585 C6.82778169,3.83447815 6.84581031,3.79069385 6.84581031,3.73918246 L6.84581031,3.73918246 Z M6.42857123,2.25566631 L9.64285708,5.46995169 L3.21428585,11.8985234 L0,11.8985234 L0,8.68423754 L6.42857123,2.25566631 Z M11.7058722,2.99742462 C11.7058722,3.27043292 11.6105769,3.50223231 11.4199865,3.69282277 L10.1373628,4.97544646 L6.92307692,1.76116062 L8.20570062,0.486263538 C8.39114031,0.290521846 8.62293969,0.192651231 8.90109877,0.192651231 C9.17410708,0.192651231 9.40848231,0.290521846 9.604224,0.486263538 L11.4199865,2.29429938 C11.6105769,2.49519231 11.7058722,2.72956708 11.7058722,2.99742462 L11.7058722,2.99742462 Z"
+                                          fill="#000000"></path>
+                                </g>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+                <!-- END profile__header ヽ(•‿•)ノ -->
                 <div class="profile__footer">
                     <!-- Begin tabs -->
                     <div class="tabs">
@@ -86,16 +225,597 @@
                         <!-- Begin tabs__body -->
                         <div class="tabs__body">
                             <div class="tabs__body-item">
-                                1
+                                <div class="tab-header">
+                                    <a href="#" class="typical-link js-profile-form"
+                                       data-origin-text="Добавить проект"
+                                       data-changeto-text="Закрыть">
+                                        <i class="plus-icon">
+                                            <svg width="10px" height="10px" viewBox="1255 632 10 10" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M1255.55556,637.555556 L1259.44444,637.555556 L1259.44444,641.444444 C1259.44444,641.751111 1259.69333,642 1260,642 C1260.30667,642 1260.55556,641.751111 1260.55556,641.444444 L1260.55556,637.555556 L1264.44444,637.555556 C1264.75111,637.555556 1265,637.306667 1265,637 C1265,636.693333 1264.75111,636.444444 1264.44444,636.444444 L1260.55556,636.444444 L1260.55556,632.555556 C1260.55556,632.248889 1260.30667,632 1260,632 C1259.69333,632 1259.44444,632.248889 1259.44444,632.555556 L1259.44444,636.444444 L1255.55556,636.444444 C1255.24889,636.444444 1255,636.693333 1255,637 C1255,637.306667 1255.24889,637.555556 1255.55556,637.555556 Z"
+                                                      stroke="none" fill="#000000"
+                                                      fill-rule="evenodd"></path>
+                                            </svg>
+                                        </i>
+                                        <span>Добавить проект</span>
+                                    </a>
+                                </div>
+                                <div class="profile-info-body is-toggle">
+                                    <!-- BEGIN tag-filter -->
+                                    <div class="tag-filter">
+                                        <div class="tag-filter-header">
+                                            <div class="tag-filter__title">
+                                                <p>Показать:</p>
+                                            </div>
+                                            <ul class="tag-filter__list">
+                                                <li class="is-active"><a href="#" data-filter-id="All">Все</a></li>
+                                                <li><a href="#" data-filter-id="Films">Художественный фильм</a></li>
+                                                <li><a href="#" data-filter-id="Serials">Сериал</a></li>
+                                                <li><a href="#" data-filter-id="Advertisement">Рекламный ролик</a></li>
+                                            </ul>
+                                        </div>
+                                        <ul class="tag-filter-body">
+                                            <li class="tag-filter__item" data-filter-attr="Serials">
+                                                <!-- BEGIN project -->
+                                                <figure class="project">
+                                                    <div class="project__picture">
+                                                        <img src="images/ic/project-1.jpg" alt="">
+                                                    </div>
+                                                    <div class="project__info">
+                                                        <div class="project__title">
+                                                            <p>Бандитский Петербург 2: Адвокат</p>
+                                                            <span>Сериал, 2000 г. (4-8 серии)</span>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <span class="list-text">Режиссёр</span>
+                                                                <span class="list-value">Квентин Тарантино</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Оператор</span>
+                                                                <span class="list-value">Анджей Секула</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Продакшен</span>
+                                                                <span class="list-value">Лоуренс Бендер</span>
+                                                            </li>
+                                                            <li class="item--big">
+                                                                <span class="list-text">Должность в проекте</span>
+                                                                <span class="list-value">Режиссёр-постановщик</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Смотреть</span>
+                                                                <span class="list-value">
+                                                                <a href="#">Видео с проекта</a>,
+                                                                <a href="#">Фотографии с проекта</a>
+                                                                    </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </figure>
+                                                <!-- END project ヽ(•‿•)ノ -->
+                                            </li>
+                                            <li class="tag-filter__item" data-filter-attr="Films">
+                                                <!-- BEGIN project -->
+                                                <figure class="project">
+                                                    <div class="project__picture">
+                                                        <img src="images/ic/project-2.jpg" alt="">
+                                                    </div>
+                                                    <div class="project__info">
+                                                        <div class="project__title">
+                                                            <p>Американская история Х</p>
+                                                            <span>Художественный фильм, 1998 г.</span>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <span class="list-text">Режиссёр</span>
+                                                                <span class="list-value">Квентин Тарантино</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Оператор</span>
+                                                                <span class="list-value">Анджей Секула</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Продакшен</span>
+                                                                <span class="list-value">Лоуренс Бендер</span>
+                                                            </li>
+                                                            <li class="item--big">
+                                                                <span class="list-text">Должность в проекте</span>
+                                                                <span class="list-value">Режиссёр, сценарист</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </figure>
+                                                <!-- END project ヽ(•‿•)ノ -->
+                                            </li>
+                                            <li class="tag-filter__item" data-filter-attr="Advertisement">
+                                                <!-- BEGIN project -->
+                                                <figure class="project">
+                                                    <div class="project__picture">
+                                                        <img src="images/ic/project-3.jpg" alt="">
+                                                    </div>
+                                                    <div class="project__info">
+                                                        <div class="project__title">
+                                                            <p>Nike Color Rush 2016 Campaing</p>
+                                                            <span>Рекламный ролик, 2016 г.</span>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <span class="list-text">Режиссёр</span>
+                                                                <span class="list-value">Квентин Тарантино</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Оператор</span>
+                                                                <span class="list-value">Анджей Секула</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Продакшен</span>
+                                                                <span class="list-value">Лоуренс Бендер</span>
+                                                            </li>
+                                                            <li class="item--big">
+                                                                <span class="list-text">Должность в проекте</span>
+                                                                <span class="list-value">Режиссёр-постановщик</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </figure>
+                                                <!-- END project ヽ(•‿•)ノ -->
+                                            </li>
+                                            <li class="tag-filter__item" data-filter-attr="Serials">
+                                                <!-- BEGIN project -->
+                                                <figure class="project">
+                                                    <div class="project__picture">
+                                                        <img src="images/ic/project-4.jpg" alt="">
+                                                    </div>
+                                                    <div class="project__info">
+                                                        <div class="project__title">
+                                                            <p>Выжить после</p>
+                                                            <span>Сериал, 2013-2016 г. (Все серии)</span>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <span class="list-text">Режиссёр</span>
+                                                                <span class="list-value">Квентин Тарантино</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Оператор</span>
+                                                                <span class="list-value">Анджей Секула</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Продакшен</span>
+                                                                <span class="list-value">Лоуренс Бендер</span>
+                                                            </li>
+                                                            <li class="item--big">
+                                                                <span class="list-text">Должность в проекте</span>
+                                                                <span class="list-value">Режиссёр-постановщик</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="list-text">Смотреть</span>
+                                                                <span class="list-value">
+                                                                    <a href="#">Видео с проекта</a>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </figure>
+                                                <!-- END project ヽ(•‿•)ノ -->
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- END tag-filter ヽ(•‿•)ノ -->
+                                </div>
+                                <div class="profile-info-form form--project">
+                                    <div class="form">
+                                        <form method="POST" action="/" id="profile-projects">
+                                            <div class="edit-column">
+                                                <div class="input-group">
+                                                    <label>Основная информация</label>
+                                                    <input type="text" placeholder="Название проекта">
+
+                                                    <select class="custom-it custom--black">
+                                                        <option value="Категория" disabled selected>Категория</option>
+                                                        <option value="Категория1">Категория1</option>
+                                                        <option value="Категория2">Категория2</option>
+                                                    </select>
+
+                                                    <input type="text" placeholder="Режиссёр">
+                                                    <input type="text" placeholder="Оператор">
+                                                    <input type="text" placeholder="Продюсер/Продакшн">
+                                                    <input type="text" placeholder="Должность в проекте">
+
+                                                </div>
+                                            </div>
+                                            <div class="edit-column">
+                                                <div class="input-group autogroup">
+                                                    <label>Год премьеры</label>
+                                                    <select class="custom-it custom--black">
+                                                        <option value="1950">1950</option>
+                                                        <option value="1951">1951</option>
+                                                        <option value="1952">1952</option>
+                                                        <option value="1953">1953</option>
+                                                        <option value="1954">1954</option>
+                                                        <option value="1955">1955</option>
+                                                        <option value="1956">1956</option>
+                                                        <option value="1957">1957</option>
+                                                        <option value="1958">1958</option>
+                                                        <option value="1959">1959</option>
+                                                        <option value="1960">1960</option>
+                                                        <option value="1961">1961</option>
+                                                        <option value="1962">1962</option>
+                                                        <option value="1963">1963</option>
+                                                        <option value="1964">1964</option>
+                                                        <option value="1965">1965</option>
+                                                        <option value="1966">1966</option>
+                                                        <option value="1967">1967</option>
+                                                        <option value="1968">1968</option>
+                                                        <option value="1969">1969</option>
+                                                        <option value="1970">1970</option>
+                                                        <option value="1971">1971</option>
+                                                        <option value="1972">1972</option>
+                                                        <option value="1973">1973</option>
+                                                        <option value="1974">1974</option>
+                                                        <option value="1975">1975</option>
+                                                        <option value="1976">1976</option>
+                                                        <option value="1977">1977</option>
+                                                        <option value="1978">1978</option>
+                                                        <option value="1979">1979</option>
+                                                        <option value="1980">1980</option>
+                                                        <option value="1981">1981</option>
+                                                        <option value="1982">1982</option>
+                                                        <option value="1983">1983</option>
+                                                        <option value="1984">1984</option>
+                                                        <option value="1985">1985</option>
+                                                        <option value="1986">1986</option>
+                                                        <option value="1987">1987</option>
+                                                        <option value="1988">1988</option>
+                                                        <option value="1989">1989</option>
+                                                        <option value="1990">1990</option>
+                                                        <option value="1991">1991</option>
+                                                        <option value="1992">1992</option>
+                                                        <option value="1993">1993</option>
+                                                        <option value="1994">1994</option>
+                                                        <option value="1995">1995</option>
+                                                        <option value="1996">1996</option>
+                                                        <option value="1997">1997</option>
+                                                        <option value="1998">1998</option>
+                                                        <option value="1999">1999</option>
+                                                        <option value="2000">2000</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label>Прикрепить видео с Vimeo или YouTube</label>
+                                                    <input type="text" placeholder="http://">
+                                                </div>
+                                                <div class="input-group">
+                                                    <label>Добавить фотографии с проекта</label>
+                                                    <label for="project-preview" class="project-preview-label">
+                                                        <svg width="29px" height="24px" viewBox="446 942 29 24"
+                                                             version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <g id="photo-camera" stroke="none" stroke-width="1"
+                                                               fill="none" fill-rule="evenodd"
+                                                               transform="translate(446.000000, 942.000000)">
+                                                                <path d="M26.49648,5.04 L22.40496,5.04 L20.48496,0.24 L8.31504,0.24 L6.39504,5.04 L5.76,5.04 L5.76,2.64 L2.88,2.64 L2.88,5.04 L2.30352,5.04 C1.03296,5.04 0,6.07296 0,7.34352 L0,21.44016 C0,22.71936 1.04064,23.76 2.31984,23.76 L26.48016,23.76 C27.75936,23.76 28.8,22.71936 28.8,21.44016 L28.8,7.34352 C28.8,6.07296 27.76704,5.04 26.49648,5.04 Z M3.84,3.6 L4.8,3.6 L4.8,5.04 L3.84,5.04 L3.84,3.6 Z M27.84,21.44016 C27.84,22.1904 27.22992,22.8 26.48016,22.8 L2.31984,22.8 C1.57008,22.8 0.96,22.18992 0.96,21.44016 L0.96,7.34352 C0.96,6.60288 1.56288,6 2.30352,6 L2.88,6 L5.76,6 L7.04496,6 L8.96496,1.2 L19.83504,1.2 L21.75504,6 L26.49648,6 C27.23712,6 27.84,6.60288 27.84,7.34352 L27.84,21.44016 Z"
+                                                                      fill="#FFFFFF"></path>
+                                                                <path d="M14.4,4.56 C9.636,4.56 5.76,8.436 5.76,13.2 C5.76,17.964 9.636,21.84 14.4,21.84 C19.164,21.84 23.04,17.964 23.04,13.2 C23.04,8.436 19.164,4.56 14.4,4.56 Z M14.4,20.88 C10.16544,20.88 6.72,17.43456 6.72,13.2 C6.72,8.96544 10.16544,5.52 14.4,5.52 C18.63456,5.52 22.08,8.96544 22.08,13.2 C22.08,17.43456 18.63456,20.88 14.4,20.88 Z"
+                                                                      fill="#FFFFFF"></path>
+                                                                <path d="M14.4,7.44 C11.22384,7.44 8.64,10.02384 8.64,13.2 C8.64,16.37616 11.22384,18.96 14.4,18.96 C17.57616,18.96 20.16,16.37616 20.16,13.2 C20.16,10.02384 17.57616,7.44 14.4,7.44 Z M14.4,18 C11.75328,18 9.6,15.84672 9.6,13.2 C9.6,10.55328 11.75328,8.4 14.4,8.4 C17.04672,8.4 19.2,10.55328 19.2,13.2 C19.2,15.84672 17.04672,18 14.4,18 Z"
+                                                                      fill="#FFFFFF"></path>
+                                                                <path d="M24.96,6.96 C23.90112,6.96 23.04,7.82112 23.04,8.88 C23.04,9.93888 23.90112,10.8 24.96,10.8 C26.01888,10.8 26.88,9.93888 26.88,8.88 C26.88,7.82112 26.01888,6.96 24.96,6.96 Z M24.96,9.84 C24.43056,9.84 24,9.40944 24,8.88 C24,8.35056 24.43056,7.92 24.96,7.92 C25.48944,7.92 25.92,8.35056 25.92,8.88 C25.92,9.40944 25.48944,9.84 24.96,9.84 Z"
+                                                                      fill="#FFFFFF"></path>
+                                                            </g>
+                                                        </svg>
+                                                        <input type="file" id="project-preview">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- BEGIN step-buttons -->
+                                            <div class="step-buttons">
+                                                <a href="#" class="simple-link js-project-next">Сохранить и продолжить
+                                                    позже</a>
+                                                <input type="submit" value="Завершить"
+                                                       class="button button--black js-project-save">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tabs__body-item">
-                                2
+                                <div class="tab-header">
+                                    <a href="#" class="typical-link js-profile-form"
+                                       data-origin-text="Добавить рекомендацию"
+                                       data-changeto-text="Закрыть">
+                                        <i class="plus-icon">
+                                            <svg width="10px" height="10px" viewBox="1255 632 10 10" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M1255.55556,637.555556 L1259.44444,637.555556 L1259.44444,641.444444 C1259.44444,641.751111 1259.69333,642 1260,642 C1260.30667,642 1260.55556,641.751111 1260.55556,641.444444 L1260.55556,637.555556 L1264.44444,637.555556 C1264.75111,637.555556 1265,637.306667 1265,637 C1265,636.693333 1264.75111,636.444444 1264.44444,636.444444 L1260.55556,636.444444 L1260.55556,632.555556 C1260.55556,632.248889 1260.30667,632 1260,632 C1259.69333,632 1259.44444,632.248889 1259.44444,632.555556 L1259.44444,636.444444 L1255.55556,636.444444 C1255.24889,636.444444 1255,636.693333 1255,637 C1255,637.306667 1255.24889,637.555556 1255.55556,637.555556 Z"
+                                                      stroke="none" fill="#000000"
+                                                      fill-rule="evenodd"></path>
+                                            </svg>
+                                        </i>
+                                        <span>Добавить рекомендацию</span>
+                                    </a>
+                                </div>
+                                <!-- BEGIN recommendations -->
+                                <div class="recommendations profile-info-body is-toggle">
+                                    <div class="recommendations__column">
+                                        <div class="recommendation__label">
+                                            <p>Меня рекомендуют</p>
+                                        </div>
+                                        <!-- BEGIN recommendation__item -->
+                                        <div class="recommendation__item">
+                                            <div class="recommendation__person">
+                                                <a href="#">Джордж Лукас</a>
+                                            </div>
+                                            <div class="recommendation__comment">
+                                                <p>Елена, отличный специалист, всегда приятно с ней работать! У нас было
+                                                    3 совместных проета и на всех она себя показала как профессионал
+                                                    высокого уровня. На свой следующий проект обязательно приглашу
+                                                    именно её!</p>
+                                            </div>
+                                        </div>
+                                        <!-- END recommendation__item ヽ(•‿•)ノ -->
+                                        <!-- BEGIN recommendation__item -->
+                                        <div class="recommendation__item">
+                                            <div class="recommendation__person">
+                                                <a href="#">Джордж Лукас</a>
+                                            </div>
+                                        </div>
+                                        <!-- END recommendation__item ヽ(•‿•)ノ -->
+                                    </div>
+                                    <div class="recommendations__column">
+                                        <div class="recommendation__label">
+                                            <p>Я рекомендую</p>
+                                        </div>
+                                        <!-- BEGIN recommendation__item -->
+                                        <div class="recommendation__item">
+                                            <div class="recommendation__person">
+                                                <a href="#">Джордж Лукас</a>
+                                                <a href="#" class="simple-link js-recommendation-edit">редактировать</a>
+                                            </div>
+                                        </div>
+                                        <!-- END recommendation__item ヽ(•‿•)ノ -->
+                                        <!-- BEGIN recommendation__item -->
+                                        <div class="recommendation__item">
+                                            <div class="recommendation__person">
+                                                <a href="#">Харрисон Форд</a>
+                                                <a href="#" class="simple-link js-recommendation-edit">редактировать</a>
+                                            </div>
+                                        </div>
+                                        <!-- END recommendation__item ヽ(•‿•)ノ -->
+                                    </div>
+                                </div>
+                                <!-- END recommendations ヽ(•‿•)ノ -->
+                                <!-- BEGIN recommendations__form -->
+                                <div class="recommendations__form profile-info-form">
+                                    <form method="POST" action="/" id="recommendation-send">
+                                        <div class="title-group">
+                                            <p>Кому отправить запрос</p>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Введите имя">
+                                        </div>
+                                        <div class="input-group">
+                                            <textarea placeholder="Комментарий"></textarea>
+                                        </div>
+                                        <input type="submit" class="button button--black" value="Отправить">
+                                    </form>
+                                </div>
+                                <!-- END recommendations__form ヽ(•‿•)ノ -->
                             </div>
                             <div class="tabs__body-item">
-                                3
+                                <div class="tab-header">
+                                    <a href="#" class="typical-link">
+                                        <i class="plus-icon">
+                                            <svg width="10px" height="10px" viewBox="1255 632 10 10" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M1255.55556,637.555556 L1259.44444,637.555556 L1259.44444,641.444444 C1259.44444,641.751111 1259.69333,642 1260,642 C1260.30667,642 1260.55556,641.751111 1260.55556,641.444444 L1260.55556,637.555556 L1264.44444,637.555556 C1264.75111,637.555556 1265,637.306667 1265,637 C1265,636.693333 1264.75111,636.444444 1264.44444,636.444444 L1260.55556,636.444444 L1260.55556,632.555556 C1260.55556,632.248889 1260.30667,632 1260,632 C1259.69333,632 1259.44444,632.248889 1259.44444,632.555556 L1259.44444,636.444444 L1255.55556,636.444444 C1255.24889,636.444444 1255,636.693333 1255,637 C1255,637.306667 1255.24889,637.555556 1255.55556,637.555556 Z"
+                                                      stroke="none" fill="#000000"
+                                                      fill-rule="evenodd"></path>
+                                            </svg>
+                                        </i>
+                                        <span>Редактировать</span>
+                                    </a>
+                                </div>
+                                <!-- BEGIN profile-info-body -->
+                                <div class="aboutme profile-info-body is-toggle">
+                                    <h2>Спасибо, что зашли на мою анкету! :)</h2>
+                                    <p>У меня высшее журналистское образование, в родном городе я работала в различных
+                                        печатных СМИ, затем создавала с другом сайт о мобильных телефонах. После ухода с
+                                        проекта 4 года работала редактором телеком-портала MForum.ru и в журнале
+                                        «Мобильные новости». Параллельно писала материалы для других сайтов и журналов.
+                                        С начала 2011 года работала в издательстве «Открытые системы», начала создание
+                                        нового сайта о технике DGL.ru. После чего ушла в декретный отпуск. В этот период
+                                        в свободное время писала статьи и обзоры на сайт iGuides.ru. </p>
+                                    <p>В 2008-м году я участвовала в популярнейшем IT-шоу рунета Radio-T, оно сделало
+                                        меня широко
+                                        известной в узких кругах. В период работы на MForum я вела подкаст о мобильных
+                                        новинках MFcast, с 2008 по 2010 год мы с Рахимом aka freetonik записывали милое
+                                        разговорное шоу “Кадры”. Впрочем, со временем интерес к подкастингу у меня
+                                        совсем пропал.</p>
+                                </div>
+                                <!-- END profile-info-body ヽ(•‿•)ノ -->
                             </div>
                             <div class="tabs__body-item">
-                                4
+                                <div class="tab-header">
+                                    <a href="#" class="typical-link js-profile-form">
+                                        <i class="plus-icon">
+                                            <svg width="10px" height="10px" viewBox="1255 632 10 10" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M1255.55556,637.555556 L1259.44444,637.555556 L1259.44444,641.444444 C1259.44444,641.751111 1259.69333,642 1260,642 C1260.30667,642 1260.55556,641.751111 1260.55556,641.444444 L1260.55556,637.555556 L1264.44444,637.555556 C1264.75111,637.555556 1265,637.306667 1265,637 C1265,636.693333 1264.75111,636.444444 1264.44444,636.444444 L1260.55556,636.444444 L1260.55556,632.555556 C1260.55556,632.248889 1260.30667,632 1260,632 C1259.69333,632 1259.44444,632.248889 1259.44444,632.555556 L1259.44444,636.444444 L1255.55556,636.444444 C1255.24889,636.444444 1255,636.693333 1255,637 C1255,637.306667 1255.24889,637.555556 1255.55556,637.555556 Z"
+                                                      stroke="none" fill="#000000"
+                                                      fill-rule="evenodd"></path>
+                                            </svg>
+                                        </i>
+                                        <span>Добавить награду</span>
+                                    </a>
+                                </div>
+                                <div class="profile-info-body is-toggle">
+                                    <div class="rewards">
+                                        <!-- BEGIN rewards__row -->
+                                        <div class="rewards__row">
+                                            <div class="rewards__year">
+                                                <span>2016</span>
+                                            </div>
+                                            <div class="rewards__info">
+                                                <div class="rewards__column">
+                                                    <span>Победы</span>
+                                                    <p></p>
+                                                </div>
+                                                <div class="rewards__column">
+                                                    <span>Ника</span>
+                                                    <p>Лучший сценарий</p>
+                                                </div>
+                                            </div>
+                                            <div class="rewards__nominations">
+                                                <div class="rewards__column">
+                                                    <span>Номинации</span>
+                                                    <p></p>
+                                                </div>
+                                                <div class="rewards__column">
+                                                    <span>Золотой Орёл</span>
+                                                    <p>Лучшая режиссёрская работа</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END rewards__row ヽ(•‿•)ノ -->
+                                        <!-- BEGIN rewards__row -->
+                                        <div class="rewards__row">
+                                            <div class="rewards__year">
+                                                <span>2015</span>
+                                            </div>
+                                            <div class="rewards__info">
+                                                <div class="rewards__column">
+                                                    <span>Победы</span>
+                                                    <p></p>
+                                                </div>
+                                                <div class="rewards__column">
+                                                    <span>Ника</span>
+                                                    <p>Лучший сценарий</p>
+                                                </div>
+                                                <div class="rewards__column">
+                                                    <span>Золотой Орёл</span>
+                                                    <p>Лучшая режиссёрская работа</p>
+                                                </div>
+                                            </div>
+                                            <div class="rewards__nominations">
+                                                <div class="rewards__column">
+                                                    <span>Номинации</span>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END rewards__row ヽ(•‿•)ノ -->
+                                        <!-- BEGIN rewards__row -->
+                                        <div class="rewards__row">
+                                            <div class="rewards__year">
+                                                <span>2014</span>
+                                            </div>
+                                            <div class="rewards__info">
+                                                <div class="rewards__column">
+                                                    <span>Победы</span>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="rewards__nominations">
+                                                <div class="rewards__column">
+                                                    <span>Номинации</span>
+                                                    <p></p>
+                                                </div>
+                                                <div class="rewards__column">
+                                                    <span>Ника</span>
+                                                    <p>Лучший сценарий</p>
+                                                </div>
+                                                <div class="rewards__column">
+                                                    <span>Золотой Орёл</span>
+                                                    <p>Лучшая режиссёрская работа</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END rewards__row ヽ(•‿•)ノ -->
+                                    </div>
+                                </div>
+                                <div class="profile-info-form body--extended">
+                                    <div class="form">
+                                        <form method="POST" action="/" id="profile-rewards">
+                                            <div class="edit-column">
+                                                <div class="input-group">
+                                                    <label>Добавить награду</label>
+                                                    <input type="text" placeholder="Название премии">
+                                                    <input type="text" placeholder="Номинация в категории">
+                                                    <input type="text" placeholder="Победа в номинации">
+                                                </div>
+                                            </div>
+                                            <div class="edit-column">
+                                                <div class="input-group autogroup">
+                                                    <label>Год</label>
+                                                    <select class="custom-it custom--black">
+                                                        <option value="1950">1950</option>
+                                                        <option value="1951">1951</option>
+                                                        <option value="1952">1952</option>
+                                                        <option value="1953">1953</option>
+                                                        <option value="1954">1954</option>
+                                                        <option value="1955">1955</option>
+                                                        <option value="1956">1956</option>
+                                                        <option value="1957">1957</option>
+                                                        <option value="1958">1958</option>
+                                                        <option value="1959">1959</option>
+                                                        <option value="1960">1960</option>
+                                                        <option value="1961">1961</option>
+                                                        <option value="1962">1962</option>
+                                                        <option value="1963">1963</option>
+                                                        <option value="1964">1964</option>
+                                                        <option value="1965">1965</option>
+                                                        <option value="1966">1966</option>
+                                                        <option value="1967">1967</option>
+                                                        <option value="1968">1968</option>
+                                                        <option value="1969">1969</option>
+                                                        <option value="1970">1970</option>
+                                                        <option value="1971">1971</option>
+                                                        <option value="1972">1972</option>
+                                                        <option value="1973">1973</option>
+                                                        <option value="1974">1974</option>
+                                                        <option value="1975">1975</option>
+                                                        <option value="1976">1976</option>
+                                                        <option value="1977">1977</option>
+                                                        <option value="1978">1978</option>
+                                                        <option value="1979">1979</option>
+                                                        <option value="1980">1980</option>
+                                                        <option value="1981">1981</option>
+                                                        <option value="1982">1982</option>
+                                                        <option value="1983">1983</option>
+                                                        <option value="1984">1984</option>
+                                                        <option value="1985">1985</option>
+                                                        <option value="1986">1986</option>
+                                                        <option value="1987">1987</option>
+                                                        <option value="1988">1988</option>
+                                                        <option value="1989">1989</option>
+                                                        <option value="1990">1990</option>
+                                                        <option value="1991">1991</option>
+                                                        <option value="1992">1992</option>
+                                                        <option value="1993">1993</option>
+                                                        <option value="1994">1994</option>
+                                                        <option value="1995">1995</option>
+                                                        <option value="1996">1996</option>
+                                                        <option value="1997">1997</option>
+                                                        <option value="1998">1998</option>
+                                                        <option value="1999">1999</option>
+                                                        <option value="2000">2000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- BEGIN step-buttons -->
+                                            <div class="step-buttons">
+                                                <input type="submit" value="Добавить"
+                                                       class="button button--black js-project-save">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- End tabs__body -->

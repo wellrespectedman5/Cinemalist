@@ -9,26 +9,25 @@
 <html lang="ru">
 <!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Cinemalist</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
     <meta name="copyright" content="(c)">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="format-detection" content="address=no" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!-- <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="favicon.ico" rel="icon" type="image/vnd.microsoft.icon"> -->
-    <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css" />
-    <link rel="stylesheet" href="components/custom-select/chosen.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css"/>
+    <link rel="stylesheet" href="components/custom-select/chosen.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
 <body>
 <div class="global_wrapper">
@@ -93,13 +92,13 @@
                     <p>Элементы формы:</p>
                     <input type="text" placeholder="Input placeholder">
                     --- <br>
-                    <select name="" id="" class="custom-it">
+                    <select class="custom-it">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
                     --- <br>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea cols="30" rows="10"></textarea>
                 </li>
                 <li>
                     <p>Типичная секция:</p>
@@ -115,6 +114,212 @@
                     </section>
                     <!-- End typical-section -->
 
+                </li>
+                <li>
+                    <p>Подсказки при ховере (дата-атрибуты):</p>
+                    <div class="profile__actions">
+                        <a href="#" class="profile-action profile-action--like"
+                           data-tooltip-pos='bottom'
+                           data-tooltip="Добавить в избранное">
+                            <svg width="23px" height="20px" viewBox="1291 120 23 20" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                   transform="translate(1291.000000, 120.000000)">
+                                    <path d="M20.6349207,6.33267185 C20.6349207,5.66302889 20.5460481,5.07192444 20.3683037,4.55935852 C20.1905585,4.04679259 19.9632111,3.63963259 19.68626,3.33788 C19.4093089,3.03612741 19.0724207,2.79017852 18.6755956,2.60003333 C18.2787696,2.40988741 17.8902119,2.28174593 17.5099207,2.21560815 C17.1296296,2.14947111 16.724537,2.11640222 16.294643,2.11640222 C15.8647489,2.11640222 15.4017859,2.22180889 14.9057541,2.43262222 C14.4097222,2.64343556 13.95296,2.90798593 13.5354659,3.22627333 C13.1179726,3.54456 12.7604163,3.84217926 12.4627978,4.11913037 C12.1651785,4.39608148 11.917163,4.65029778 11.7187496,4.88177926 C11.5699407,5.06365778 11.3673941,5.1545963 11.1111111,5.1545963 C10.8548281,5.1545963 10.6522815,5.06365778 10.5034726,4.88177926 C10.3050593,4.65029778 10.0570437,4.39608148 9.75942444,4.11913037 C9.46180593,3.84217926 9.10424963,3.54456 8.6867563,3.22627333 C8.26926222,2.90798593 7.8125,2.64343556 7.31646815,2.43262222 C6.8204363,2.22180889 6.35747333,2.11640222 5.92757926,2.11640222 C5.49768519,2.11640222 5.09259259,2.14947111 4.71230148,2.21560815 C4.33201037,2.28174593 3.94345259,2.40988741 3.54662667,2.60003333 C3.14980148,2.79017852 2.81291333,3.03612741 2.53596222,3.33788 C2.25901111,3.63963259 2.0316637,4.04679259 1.85391852,4.55935852 C1.67617407,5.07192444 1.58730148,5.66302889 1.58730148,6.33267185 C1.58730148,7.72156074 2.36028444,9.18898815 3.90625037,10.7349541 L11.1111111,17.6793985 L18.3035711,10.7473548 C19.8578044,9.19312148 20.6349207,7.72156074 20.6349207,6.33267185 L20.6349207,6.33267185 Z M22.2222222,6.33267185 C22.2222222,8.15972222 21.2756281,10.0198415 19.3824407,11.9130289 L11.6567459,19.3535052 C11.5079363,19.5023148 11.3260585,19.5767193 11.1111111,19.5767193 C10.8961637,19.5767193 10.7142859,19.5023148 10.5654763,19.3535052 L2.82738074,11.8882274 C2.74470889,11.8220896 2.63103481,11.7146163 2.48635926,11.5658067 C2.34168296,11.416997 2.11226815,11.1462467 1.79811481,10.7535548 C1.48396148,10.360863 1.20287704,9.95783704 0.954860741,9.54447778 C0.706845185,9.13111778 0.485697778,8.63095259 0.291418519,8.04398148 C0.0971392593,7.45701037 0,6.88657407 0,6.33267185 C0,4.51388889 0.524966667,3.09193111 1.57490074,2.06679926 C2.62483481,1.04166667 4.07572741,0.529100741 5.92757926,0.529100741 C6.44014519,0.529100741 6.96304593,0.617972593 7.49628,0.795717778 C8.02951407,0.973462222 8.52554593,1.21321111 8.98437481,1.5149637 C9.44320444,1.8167163 9.83796296,2.09986741 10.1686511,2.36441778 C10.4993385,2.62896815 10.8134919,2.91005259 11.1111111,3.20767185 C11.4087304,2.91005259 11.7228837,2.62896815 12.0535711,2.36441778 C12.3842593,2.09986741 12.7790178,1.8167163 13.2378474,1.5149637 C13.6966763,1.21321111 14.1927081,0.973462222 14.7259422,0.795717778 C15.2591763,0.617972593 15.782077,0.529100741 16.294643,0.529100741 C18.1464948,0.529100741 19.5973874,1.04166667 20.6473215,2.06679926 C21.6972556,3.09193111 22.2222222,4.51388889 22.2222222,6.33267185 L22.2222222,6.33267185 Z"
+                                          fill="#000000"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="profile-action profile-action--repost"
+                           data-tooltip-pos='bottom'
+                           data-tooltip="Поделиться анкетой">
+                            <svg width="20px" height="20px" viewBox="1344 120 20 20" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none"
+                                   fill-rule="evenodd" transform="translate(1344.000000, 120.000000)">
+                                    <path d="M14.2945455,5.9025 C14.8278788,6.31875 15.489697,6.5675 16.209697,6.5675 C17.9684848,6.5675 19.3939394,5.0975 19.3939394,3.28375 C19.3939394,1.47 17.9684848,0 16.209697,0 C14.4521212,0 13.0254545,1.47 13.0254545,3.28375 L13.0254545,3.28625 L5.16606061,7.205 C4.62181818,6.7575 3.93333333,6.4875 3.18424242,6.4875 C1.42545455,6.4875 0,7.95875 0,9.77125 C0,11.58375 1.42545455,13.055 3.18424242,13.055 C3.81939394,13.055 4.41090909,12.86 4.90787879,12.53 L13.0266667,16.5775 L13.0266667,16.58 C13.0266667,18.39375 14.4521212,19.86375 16.2109091,19.86375 C17.969697,19.86375 19.3951515,18.39375 19.3951515,16.58 C19.3951515,14.76625 17.969697,13.29625 16.2109091,13.29625 C15.4909091,13.29625 14.8290909,13.545 14.2957576,13.96125 L6.35636364,10.00375 C6.36,9.95375 6.36242424,9.905 6.36363636,9.855 L14.2945455,5.9025 Z"
+                                          fill="#000000"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="profile-action profile-action--download"
+                           data-tooltip-pos='bottom'
+                           data-tooltip="Скачать анкету как *.pdf">
+                            <svg width="16px" height="21px" viewBox="1394 120 16 21" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none"
+                                   fill-rule="evenodd" transform="translate(1394.000000, 120.000000)">
+                                    <path d="M8,14.6666667 L14.6666667,8 L10.6666667,8 L10.6666667,0 L5.33333333,0 L5.35733333,8 L1.33333333,8 L8,14.6666667 Z M0,17.3333333 L0,20 L16,20 L16,17.3333333 L16,14.6666667 L13.3333333,14.6666667 L13.3333333,17.3333333 L2.66666667,17.3333333 L2.66666667,14.6666667 L0,14.6666667 L0,17.3333333 Z"
+                                          fill="#000000"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <p>Фильтр по тэгам:</p>
+                    <!-- BEGIN tag-filter -->
+                    <div class="tag-filter">
+                        <div class="tag-filter-header">
+                            <div class="tag-filter__title">
+                                <p>Показать:</p>
+                            </div>
+                            <ul class="tag-filter__list">
+                                <li class="is-active"><a href="#" data-filter-id="All">Все</a></li>
+                                <li><a href="#" data-filter-id="Films">Художественный фильм</a></li>
+                                <li><a href="#" data-filter-id="Serials">Сериал</a></li>
+                                <li><a href="#" data-filter-id="Advertisement">Рекламный ролик</a></li>
+                            </ul>
+                        </div>
+                        <ul class="tag-filter-body">
+                            <li class="tag-filter__item" data-filter-attr="Serials">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-1.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Бандитский Петербург 2: Адвокат</p>
+                                            <span>Сериал, 2000 г. (4-8 серии)</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Смотреть</span>
+                                                <span class="list-value">
+                                                                <a href="#">Видео с проекта</a>,
+                                                                <a href="#">Фотографии с проекта</a>
+                                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                            <li class="tag-filter__item" data-filter-attr="Films">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-2.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Американская история Х</p>
+                                            <span>Художественный фильм, 1998 г.</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр, сценарист</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                            <li class="tag-filter__item" data-filter-attr="Advertisement">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-3.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Nike Color Rush 2016 Campaing</p>
+                                            <span>Рекламный ролик, 2016 г.</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                            <li class="tag-filter__item" data-filter-attr="Serials">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-4.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Выжить после</p>
+                                            <span>Сериал, 2013-2016 г. (Все серии)</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Смотреть</span>
+                                                <span class="list-value">
+                                                                    <a href="#">Видео с проекта</a>
+                                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END tag-filter ヽ(•‿•)ノ -->
                 </li>
                 <li>
                     <p>Блог-итем:</p>
@@ -142,7 +347,155 @@
                             </div>
                         </a>
                     </figure>
-
+                </li>
+                <li>
+                    <p>People-итем:</p>
+                    <ul class="favorite__list">
+                        <!-- BEGIN favorite__item -->
+                        <li class="favorite__item">
+                            <a href="#" class="favorite__people">
+                                <div class="favorite__image">
+                                    <img src="images/bgs/user-face1.jpg" alt="">
+                                </div>
+                                <div class="favorite__info">
+                                    <div class="favorite__header">
+                                        <div class="favorite__name">
+                                            <span>Екатерина Суливан</span>
+                                        </div>
+                                        <div class="favorite__subinfo">
+                                            <p>26 лет
+                                                <span class="full-birthday">(01 января 1990)</span>,
+                                                <span class="cityname">г. Москва</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="favorite__status">
+                                        <span class="status__text">Готова работать</span>
+                                        <span class="user__status status--away"></span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span class="favorite__char">Специализация</span>
+                                            <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                        </li>
+                                        <li>
+                                            <span class="favorite__char">Опыт</span>
+                                            <span class="favorite__value">4 года</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span class="favorite__char">Последний проект </span>
+                                            <span class="favorite__value">NFL Color Rush 2016 Campaing </span>
+                                        </li>
+                                        <li>
+                                            <span class="favorite__char">Должность в проекте </span>
+                                            <span class="favorite__value">Режиссёр</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- END favorite__item ヽ(•‿•)ノ -->
+                    </ul>
+                </li>
+                <li>
+                    <p>Favorite-итем's:</p>
+                    <ul class="favorite__list">
+                        <!-- BEGIN favorite__item -->
+                        <li class="favorite__item">
+                            <div class="favorite__people">
+                                <div class="favorite__image">
+                                    <a href="#">
+                                        <img src="images/bgs/user-face1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="favorite__info">
+                                    <div class="favorite__header">
+                                        <div class="favorite__name">
+                                            <a href="#">Екатерина Суливан</a>
+                                        </div>
+                                        <div class="favorite__subinfo">
+                                            <p>26 лет
+                                                <span class="full-birthday">(01 января 1990)</span>,
+                                                <span class="cityname">г. Москва</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="favorite__status">
+                                        <span class="status__text">Готова работать</span>
+                                        <span class="user__status status--online"></span>
+                                        <!--<span class="user__status status--online"></span>-->
+                                        <!--<span class="user__status status--notdistrub"></span>-->
+                                        <!--<span class="user__status status--offline"></span>-->
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span class="favorite__char">Специализация</span>
+                                            <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                        </li>
+                                        <li>
+                                            <span class="favorite__char">Опыт</span>
+                                            <span class="favorite__value">4 года</span>
+                                        </li>
+                                    </ul>
+                                    <div class="favorite__footer">
+                                        <a href="#" class="button button--black">Показать телефон</a>
+                                        <a href="#" class="simple-link">Написать письмо</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="favorite__message">
+                                <p>Работали вместе на проетке «НФЛ колор раш», хорошая девочка. Нужно будет позвать на
+                                    съёмки клипа Шифутинского.</p>
+                            </div>
+                        </li>
+                        <!-- END favorite__item ヽ(•‿•)ノ -->
+                        <!-- BEGIN favorite__item -->
+                        <li class="favorite__item">
+                            <div class="favorite__people">
+                                <div class="favorite__image">
+                                    <a href="#"><img src="images/bgs/user-face2.jpg" alt=""></a>
+                                </div>
+                                <div class="favorite__info">
+                                    <div class="favorite__header">
+                                        <div class="favorite__name">
+                                            <a href="#">Екатерина Суливан</a>
+                                        </div>
+                                        <div class="favorite__subinfo">
+                                            <p>26 лет
+                                                <span class="full-birthday">(01 января 1990)</span>,
+                                                <span class="cityname">г. Москва</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="favorite__status">
+                                        <span class="status__text">Готова работать</span>
+                                        <span class="user__status status--offline"></span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span class="favorite__char">Специализация</span>
+                                            <span class="favorite__value">Режиссёр, Режиссёр-постановщик</span>
+                                        </li>
+                                        <li>
+                                            <span class="favorite__char">Опыт</span>
+                                            <span class="favorite__value">4 года</span>
+                                        </li>
+                                    </ul>
+                                    <div class="favorite__footer">
+                                        <a href="#" class="button button--black">Показать телефон</a>
+                                        <a href="#" class="simple-link">Написать письмо</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="favorite__message">
+                                <p>Работали вместе на проетке «НФЛ колор раш», хорошая девочка. Нужно будет позвать на
+                                    съёмки клипа Шифутинского.</p>
+                            </div>
+                        </li>
+                        <!-- END favorite__item ヽ(•‿•)ノ -->
+                    </ul>
                 </li>
                 <li>
                     <p>Табы:</p>
@@ -747,53 +1100,101 @@
                 </li>
                 <li>
                     <p>Комментарии:</p>
-                    <ul class="comments__list">
-                        <!-- BEGIN comments__item -->
-                        <li class="comments__item">
-                            <div class="comments__author">
-                                <div class="author__img">
-                                    <img src="images/bgs/account-face.png" alt="">
-                                </div>
-                                <div class="author__info">
-                                    <div class="author__name">
-                                        <p>
-                                            <span class="name">Виктор Столяров</span>
-                                            <span>01.10.2016</span>
-                                        </p>
+                    <!-- BEGIN comments -->
+                    <div class="comments">
+                        <div class="comments__total">
+                            <p>Все комментарии (<span>4</span>)</p>
+                        </div>
+                        <ul class="comments__list">
+                            <!-- BEGIN comments__item -->
+                            <li class="comments__item">
+                                <div class="comments__author">
+                                    <div class="author__img">
+                                        <img src="images/bgs/account-face.png" alt="">
                                     </div>
-                                    <div class="author__text">
-                                        <p>По словам Эсмейла, эта книга поможет фанатам сериала приблизиться к
-                                            пониманию того, что произошло во втором сезоне, и приоткроет некоторые
-                                            тайны третьего сезона, который выйдет на ТВ в 2017 году. </p>
-                                        <a href="#" class="comments__reply">Ответить</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- BEGIN comments__sublist -->
-                            <ul class="comments__sublist">
-                                <li class="comments__subitem">
-                                    <div class="comments__author">
-                                        <div class="author__img">
-                                            <img src="images/bgs/account-face.png" alt="">
+                                    <div class="author__info">
+                                        <div class="author__name">
+                                            <p>
+                                                <span class="name">Виктор Столяров</span>
+                                                <span>01.10.2016</span>
+                                            </p>
                                         </div>
-                                        <div class="author__info">
-                                            <div class="author__name">
-                                                <p>Виктор Столяров <span>Час назад</span></p>
-                                            </div>
-                                            <div class="author__text">
-                                                <p>По словам Эсмейла, эта книга поможет фанатам сериала приблизиться
-                                                    к
-                                                    пониманию того, что произошло во втором сезоне, и приоткроет
-                                                    некоторые
-                                                    тайны третьего сезона, который выйдет на ТВ в 2017 году. </p>
-                                                <a href="#" class="comments__reply">Ответить</a>
-                                            </div>
+                                        <div class="author__text">
+                                            <p>По словам Эсмейла, эта книга поможет фанатам сериала приблизиться к
+                                                пониманию того, что произошло во втором сезоне, и приоткроет некоторые
+                                                тайны третьего сезона, который выйдет на ТВ в 2017 году. </p>
+                                            <a href="#" class="comments__reply">Ответить</a>
                                         </div>
                                     </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                                </div>
+                                <!-- BEGIN comments__sublist -->
+                                <ul class="comments__sublist">
+                                    <li class="comments__subitem">
+                                        <div class="comments__author">
+                                            <div class="author__img">
+                                                <img src="images/bgs/account-face.png" alt="">
+                                            </div>
+                                            <div class="author__info">
+                                                <div class="author__name">
+                                                    <p><span class="name">Виктор Столяров</span>
+                                                        <span>Час назад</span></p>
+                                                </div>
+                                                <div class="author__text">
+                                                    <p>По словам Эсмейла, эта книга поможет фанатам сериала приблизиться
+                                                        к
+                                                        пониманию того, что произошло во втором сезоне, и приоткроет
+                                                        некоторые
+                                                        тайны третьего сезона, который выйдет на ТВ в 2017 году. </p>
+                                                    <a href="#" class="comments__reply">Ответить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="comments__subitem">
+                                        <div class="comments__author">
+                                            <div class="author__img">
+                                                <img src="images/bgs/account-face.png" alt="">
+                                            </div>
+                                            <div class="author__info">
+                                                <div class="author__name">
+                                                    <p><span class="name">Александр Малинин</span>
+                                                        <span>Только что</span></p>
+                                                </div>
+                                                <div class="author__text">
+                                                    <p>Алина, не хочу с вами говорить.</p>
+                                                    <a href="#" class="comments__reply">Ответить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- END comments__sublist ヽ(•‿•)ノ -->
+                            </li>
+                            <!-- END comments__item ヽ(•‿•)ノ -->
+                            <!-- BEGIN comments__item -->
+                            <li class="comments__item">
+                                <div class="comments__author">
+                                    <div class="author__img">
+                                        <img src="images/bgs/account-face.png" alt="">
+                                    </div>
+                                    <div class="author__info">
+                                        <div class="author__name">
+                                            <p><span class="name">Виктор Столяров</span>
+                                                <span>01.10.2016</span></p>
+                                        </div>
+                                        <div class="author__text">
+                                            <p>По словам Эсмейла, эта книга поможет фанатам сериала приблизиться к
+                                                пониманию того, что произошло во втором сезоне, и приоткроет некоторые
+                                                тайны третьего сезона, который выйдет на ТВ в 2017 году. </p>
+                                            <a href="#" class="comments__reply">Ответить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- END comments__item ヽ(•‿•)ノ -->
+                        </ul>
+                    </div>
+                    <!-- END comments ヽ(•‿•)ノ -->
                 </li>
                 <li>
                     <p>Фильтр:</p>
@@ -878,6 +1279,205 @@
                         </div>
                     </div>
                     <!-- END comment-form ヽ(•‿•)ノ -->
+                </li>
+                <li>
+                    <p>Пример блока комминтариев в блоге:</p>
+                    <!-- BEGIN comment-form -->
+                    <div class="comment-form">
+                        <div class="form">
+                            <div class="form__title">
+                                <p>Оставить комментарий</p>
+                            </div>
+                            <form method="POST" action="/">
+                                <div class="input-group">
+                                    <textarea name="comment-text"
+                                              placeholder="Тут можно написать ваш комментарий"></textarea>
+                                </div>
+                                <input type="submit" class="button button--black" value="Отправить">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END comment-form ヽ(•‿•)ノ -->
+                </li>
+                <li>
+                    <p>Фильтр по тэгам:</p>
+                    <!-- BEGIN tag-filter -->
+                    <div class="tag-filter">
+                        <div class="tag-filter-header">
+                            <div class="tag-filter__title">
+                                <p>Показать:</p>
+                            </div>
+                            <ul class="tag-filter__list">
+                                <li class="is-active"><a href="#" data-filter-id="All">Все</a></li>
+                                <li><a href="#" data-filter-id="Films">Художественный фильм</a></li>
+                                <li><a href="#" data-filter-id="Serials">Сериал</a></li>
+                                <li><a href="#" data-filter-id="Advertisement">Рекламный ролик</a></li>
+                            </ul>
+                        </div>
+                        <ul class="tag-filter-body">
+                            <li class="tag-filter__item" data-filter-attr="Serials">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-1.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Бандитский Петербург 2: Адвокат</p>
+                                            <span>Сериал, 2000 г. (4-8 серии)</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Смотреть</span>
+                                                <span class="list-value">
+                                                                <a href="#">Видео с проекта</a>,
+                                                                <a href="#">Фотографии с проекта</a>
+                                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                            <li class="tag-filter__item" data-filter-attr="Films">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-2.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Бандитский Петербург 2: Адвокат</p>
+                                            <span>Сериал, 2000 г. (4-8 серии)</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Смотреть</span>
+                                                <span class="list-value">
+                                                                <a href="#">Видео с проекта</a>,
+                                                                <a href="#">Фотографии с проекта</a>
+                                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                            <li class="tag-filter__item" data-filter-attr="Advertisement">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-3.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Бандитский Петербург 2: Адвокат</p>
+                                            <span>Сериал, 2000 г. (4-8 серии)</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Смотреть</span>
+                                                <span class="list-value">
+                                                                <a href="#">Видео с проекта</a>,
+                                                                <a href="#">Фотографии с проекта</a>
+                                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                            <li class="tag-filter__item" data-filter-attr="Serials">
+                                <!-- BEGIN project -->
+                                <figure class="project">
+                                    <div class="project__picture">
+                                        <img src="images/ic/project-4.jpg" alt="">
+                                    </div>
+                                    <div class="project__info">
+                                        <div class="project__title">
+                                            <p>Бандитский Петербург 2: Адвокат</p>
+                                            <span>Сериал, 2000 г. (4-8 серии)</span>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span class="list-text">Режиссёр</span>
+                                                <span class="list-value">Квентин Тарантино</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Оператор</span>
+                                                <span class="list-value">Анджей Секула</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Продакшен</span>
+                                                <span class="list-value">Лоуренс Бендер</span>
+                                            </li>
+                                            <li class="item--big">
+                                                <span class="list-text">Должность в проекте</span>
+                                                <span class="list-value">Режиссёр-постановщик</span>
+                                            </li>
+                                            <li>
+                                                <span class="list-text">Смотреть</span>
+                                                <span class="list-value">
+                                                                <a href="#">Видео с проекта</a>,
+                                                                <a href="#">Фотографии с проекта</a>
+                                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </figure>
+                                <!-- END project ヽ(•‿•)ノ -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END tag-filter ヽ(•‿•)ノ -->
                 </li>
             </ul>
 
