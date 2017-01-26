@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="People_450" transform="translate(-406.000000, -90.000000)">
+            <g id="search" transform="translate(406.000000, 90.000000)">
+                <g id="Group">
+                    <rect id="Rectangle-2" fill="#F0DB74" x="0" y="0" width="44" height="44"></rect>
+                    <g id="arrow-carrot-down" transform="translate(11.000000, 17.000000)" fill="#000000">
+                        <path d="M18.95025,1.06666667 L11,8.776 L3.04975,1.06666667 C2.5135,0.546666667 1.64175,0.546666667 1.1055,1.06666667 C0.56925,1.58666667 0.56925,2.432 1.1055,2.952 L10.02375,11.6 C10.29325,11.8613333 10.648,11.992 11,11.9893333 C11.35475,11.9893333 11.70675,11.8613333 11.97625,11.6 L20.8945,2.952 C21.43075,2.432 21.43075,1.58666667 20.8945,1.06666667 C20.35825,0.546666667 19.4865,0.546666667 18.95025,1.06666667 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

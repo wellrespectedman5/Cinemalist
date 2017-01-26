@@ -18,4 +18,28 @@
     <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css"/>
     <link rel="stylesheet" href="components/custom-select/chosen.css"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
+
+    <script type="text/javascript">
+        function checkSidebar() {
+            var content = document.querySelectorAll('.content')[0],
+                body = document.querySelectorAll('body')[0],
+                className = 'content--minimized';
+
+
+            if (body.offsetWidth < 1900) {
+                if (content.classList)
+                    content.classList.add(className);
+                else
+                    content.className += ' ' + className;
+            } else {
+                if (content.classList)
+                    content.classList.remove(className);
+                else
+                    content.className = content.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+            }
+        }
+        window.addEventListener('resize', function () {
+            checkSidebar();
+        });
+    </script>
 </head>
