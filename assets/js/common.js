@@ -346,17 +346,16 @@ $(document).ready(function () {
         }
     }());
 
-//At settings page change tab with 'next' button
+    //At settings page change tab with 'next' button
     (function () {
         $(document).on('click', '.js-settings-next', function (e) {
             e.preventDefault();
-            var tabIndex = $('.tabs__header .tabs__header-wrap').children('.is-active').index();
-            $('.tabs__header .tabs__header-wrap').children().eq(tabIndex + 1).find('.tabs__header-link').click();
+            var tabIndex = $('.tabs__header').children('.is-active').index();
+            $('.tabs__header').children().eq(tabIndex + 1).find('.tabs__header-link').click();
 
-            //changeTab($('.tabs__header-wrap'), 4);
+            changeTab($('.tabs__header-wrap'), 4);
         });
     }());
-
 
     //multiple selection
     (function () {
@@ -380,7 +379,7 @@ $(document).ready(function () {
                 (parent.find('.chosen-results').length) ? $self.trigger("chosen:updated") : console.log('without customize');
 
                 var selectList = parent.find('.selected-values'),
-                    inputHidden = parent.find("input[name=" + hiddenName + "]");
+                    inputHidden = parent.find("input[name='" + hiddenName + "']");
                 inputHidden.val(inputHidden.val() + selectedValue + ',');
 
                 selectList.append("<li class='selected-values__item'>" +
@@ -469,7 +468,7 @@ $(document).ready(function () {
             });
         });
 
-        if (languageInput.val() != '' && languageInput.val() != null) {
+        if (languageInput.val()) {
             var languageArrPrototype = languageInput.val().split(','),
                 outputArray = [],
                 currentString = [];
@@ -776,8 +775,8 @@ $(document).ready(function () {
         var inputFile = $('#project-preview'),
             fileArray = [],
             totalFileCounter = 0,
-            filesFormData = new FormData(),
             totalInput = $('#project-upload-files');
+        window.filesFormData = new FormData();
 
         if (inputFile.length) {
             var inputLabel = $('.project-preview-label');
@@ -814,11 +813,11 @@ $(document).ready(function () {
                     fileArray.splice(selfIndex, 1);
                     // totalInput.files = fileArray;
                     $('#project-preview_list').find('li').eq(selfIndex).remove();
-                    filesFormData.delete("uploadedImage[" + (selfIndex + 1) + "]");
+                    window.filesFormData.delete("uploadedImage[" + (selfIndex + 1) + "]");
                     totalFileCounter--;
                 }
                 //LOGGING IN CONSOLE EXAMPLE OF DATA
-                for (var pair of filesFormData.entries()) {
+                for (var pair of window.filesFormData.entries()) {
                     console.log(pair[0] + '--' + pair[1]);
                 }
             });
@@ -836,7 +835,7 @@ $(document).ready(function () {
                             fileArray.push(inputFiles[i]);
                             readImage(inputFiles[i]);
                             //APPENDING DATA
-                            filesFormData.append(
+                            window.filesFormData.append(
                                 'uploadedImage[' + totalFileCounter + ']',
                                 inputFiles[i]);
                         } else {
@@ -846,7 +845,7 @@ $(document).ready(function () {
                     }
 
                     //LOGGING IN CONSOLE EXAMPLE OF DATA
-                    for (var pair of filesFormData.entries()) {
+                    for (var pair of window.filesFormData.entries()) {
                         console.log(pair[0] + '--' + pair[1]);
                     }
 
