@@ -549,6 +549,26 @@
                             </form>
                         </div>
                     </figure>
+                    <figure class="popup popup--extended" id="favorite-add">
+                        <div class="popup-title">
+                            <p>Добавить в избранное</p>
+                        </div>
+                        <div class="popup-subtitle">
+                            <p>Вы добавляете пользователя в избранное, и можете оставить комметарий. Он будет виден только вам</p>
+                        </div>
+                        <div class="popup-form">
+                            <form method="POST" action="/">
+                                <div class="input-group">
+                                    <textarea name="some-name" placeholder="Текст комментария"></textarea>
+                                </div>
+            
+                                <div class="popup-buttons half-group">
+                                    <input type="submit" value="Добавить" class="button button--black">
+                                    <a href="#" class="simple-link link--black js-popup-close">Отменить</a>
+                                </div>
+                            </form>
+                        </div>
+                    </figure>
                     <figure class="popup popup--extended" id="message-send-form">
                         <div class="popup-title">
                             <p>Отправить сообщение</p>
@@ -819,6 +839,7 @@
                             </div>
                             <!-- End additional-group -->
                             <input type="submit" class="button button--transparent-yellow" value="Искать">
+                            <a href="#" class="simple-link js-search-clear">Очистить фильтр</a>
                         </form>
                     </div>
                 </div>

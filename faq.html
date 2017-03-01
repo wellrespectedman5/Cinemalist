@@ -447,8 +447,73 @@
                                 студент и т.д.).</p>
                         </div>
                         <!-- END tabs__body-item ヽ(•‿•)ノ -->
+
                     </div>
                     <!-- End tabs__body -->
+                    <!-- BEGIN base-search-body -->
+                    <div class="base-search-body">
+                        <div class="search-body__column js-column-rights">
+                            <div class="search-body-title">
+                                <p>Наши права</p>
+                            </div>
+                            <div class="search-body-results">
+                                <!-- BEGIN search-result -->
+                                <a href="#" class="search-result">
+                                    Зайдите в свой аккаунт CINEMALIST, перейдите в профиль того или иного...
+                                </a>
+                                <!-- END search-result ヽ(•‿•)ノ -->
+                                <!-- BEGIN search-result -->
+                                <a href="#" class="search-result">
+                                    Затем у вас будет возможность описать то, каким образом этот человек к вам относится
+                                    (коллега, студент и т.д.)...
+                                </a>
+                                <!-- END search-result ヽ(•‿•)ノ -->
+                            </div>
+                        </div>
+                        <div class="search-body__column js-column-terms">
+                            <div class="search-body-title">
+                                <p>Словарь терминов</p>
+                            </div>
+                            <div class="search-body-results">
+                                <!-- BEGIN search-result -->
+                                <a href="#" class="search-result">
+                                    Затем у вас будет возможность описать то, каким образом этот человек к вам ...
+                                </a>
+                                <!-- END search-result ヽ(•‿•)ノ -->
+                            </div>
+                        </div>
+                        <div class="search-body__column js-column-faq">
+                            <div class="search-body-title">
+                                <p>FAQ</p>
+                            </div>
+                            <div class="search-body-results">
+                                <!-- BEGIN search-result -->
+                                <a href="#" class="search-result">
+                                    Затем у вас будет возможность описать то, каким образом этот человек к вам ...
+                                </a>
+                                <!-- END search-result ヽ(•‿•)ノ -->
+                            </div>
+                        </div>
+                        <div class="search-body__column js-column-use_terms">
+                            <div class="search-body-title">
+                                <p>Пользовательское соглашение</p>
+                            </div>
+                            <div class="search-body-results">
+                                <!-- BEGIN search-result -->
+                                <a href="#" class="search-result">
+                                    Зайдите в свой аккаунт CINEMALIST, перейдите в профиль того или иного...
+                                </a>
+                                <!-- END search-result ヽ(•‿•)ノ -->
+                                <!-- BEGIN search-result -->
+                                <a href="#" class="search-result">
+                                    Затем у вас будет возможность описать то, каким образом этот человек к вам относится
+                                    (коллега, студент и т.д.)...
+                                </a>
+                                <!-- END search-result ヽ(•‿•)ノ -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END base-search-body ヽ(•‿•)ノ -->
                 </div>
                 <!-- End tabs -->
             </section>
@@ -673,6 +738,26 @@
             
                                 <div class="popup-buttons half-group">
                                     <input type="submit" value="Отправить" class="button button--black">
+                                    <a href="#" class="simple-link link--black js-popup-close">Отменить</a>
+                                </div>
+                            </form>
+                        </div>
+                    </figure>
+                    <figure class="popup popup--extended" id="favorite-add">
+                        <div class="popup-title">
+                            <p>Добавить в избранное</p>
+                        </div>
+                        <div class="popup-subtitle">
+                            <p>Вы добавляете пользователя в избранное, и можете оставить комметарий. Он будет виден только вам</p>
+                        </div>
+                        <div class="popup-form">
+                            <form method="POST" action="/">
+                                <div class="input-group">
+                                    <textarea name="some-name" placeholder="Текст комментария"></textarea>
+                                </div>
+            
+                                <div class="popup-buttons half-group">
+                                    <input type="submit" value="Добавить" class="button button--black">
                                     <a href="#" class="simple-link link--black js-popup-close">Отменить</a>
                                 </div>
                             </form>
@@ -948,6 +1033,7 @@
                             </div>
                             <!-- End additional-group -->
                             <input type="submit" class="button button--transparent-yellow" value="Искать">
+                            <a href="#" class="simple-link js-search-clear">Очистить фильтр</a>
                         </form>
                     </div>
                 </div>

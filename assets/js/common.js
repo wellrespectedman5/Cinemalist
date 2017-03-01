@@ -1,5 +1,37 @@
 $(document).ready(function () {
 
+    //Profile popup social list
+    (function () {
+        var popupSocialLink = $('.js-social-popup');
+        if (popupSocialLink.length) {
+            popupSocialLink.on('click', function (e) {
+                e.preventDefault();
+            });
+            popupSocialLink.on('hover', function () {
+
+            }, function () {
+
+            });
+        }
+    }());
+    //Pinning blog/project functional
+    (function () {
+        $(document).on('click', '.js-pin-blog', function (e) {
+            e.preventDefault();
+            var $self = $(this);
+            $self.toggleClass('is-pinned');
+
+            //   THERE MUST BE AJAX FOR BLOG
+        });
+        $(document).on('click', '.js-pin-project', function (e) {
+            e.preventDefault();
+            var $self = $(this);
+            $self.toggleClass('is-pinned');
+
+            //   THERE MUST BE AJAX FOR PROJECT
+        });
+    }());
+
     //Make each select as custom
     (function () {
         $.each($('.custom-it'), function (idx, _el) {
@@ -121,13 +153,16 @@ $(document).ready(function () {
     (function () {
         $(document).on('click', '.js-extended-search', function (e) {
             e.preventDefault();
-            var $self = $(this);
+            var $self = $(this),
+                $searchClearButton = $('.js-search-clear');
             $self.parent().toggleClass('is-open');
 
             if ($self.parent().hasClass('is-open')) {
                 $self.html('Свернуть');
+                ($searchClearButton.length) ? $searchClearButton.addClass('is-visible') : !0;
             } else {
                 $self.html('Рассширенный поиск');
+                ($searchClearButton.length) ? $searchClearButton.removeClass('is-visible') : !0;
             }
         });
     }());
@@ -273,24 +308,25 @@ $(document).ready(function () {
                     $self.parents('.tabs__header').addClass('search-toggle');
                     $self.attr('placeholder', 'Начать поиск');
                     //remove search's blocks
-                    $('.base-search-close').remove();
-                    $('.base-search-body').remove();
+                    // $('.base-search-close').remove();
+                    // $('.base-search-body').remove();
 
                     //init search's blocks
                     $self.parent().append("<a href='#' class='base-search-close'></a>");
-                    $self.closest('.tabs').find('.tabs__body').append("<div class='base-search-body'></div>");
+                    // $self.closest('.tabs').find('.tabs__body').append("<div class='base-search-body'></div>");
                 }
             });
             $(document).on('blur', '.js-faq-search', function () {
                 var $self = $(this);
                 if ($self.parents('.tabs__header').length && $self.parents('.tabs__header').hasClass('search-toggle') && ($self.val().length < 1)) {
+
                     $self.attr('placeholder', 'Поиск по базе знаний');
                     $self.parents('.tabs__header').removeClass('search-toggle');
                 }
             });
             $(document).on('click', '.base-search-close', function (e) {
                 e.preventDefault();
-                $('.js-faq-search').val("").attr('placeholder', 'Поиск по базе знаний');
+                $('.js-faq-search').val("").attr('placeholder', 'Поиск по базе знаний').end().blur();
                 $(this).closest('.tabs__header').removeClass('search-toggle');
             });
         }
