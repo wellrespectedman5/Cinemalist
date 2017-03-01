@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    //Masks for input with phone-number
+    //Input masks
+    jQuery(function ($) {
+        $(".phone-validation").mask("+7 (999) 999-9999");
+    });
+
     //Profile popup social list
     (function () {
         var popupSocialLink = $('.js-social-popup');
