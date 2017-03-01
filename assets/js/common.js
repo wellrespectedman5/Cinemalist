@@ -153,16 +153,13 @@ $(document).ready(function () {
     (function () {
         $(document).on('click', '.js-extended-search', function (e) {
             e.preventDefault();
-            var $self = $(this),
-                $searchClearButton = $('.js-search-clear');
+            var $self = $(this);
             $self.parent().toggleClass('is-open');
 
             if ($self.parent().hasClass('is-open')) {
                 $self.html('Свернуть');
-                ($searchClearButton.length) ? $searchClearButton.addClass('is-visible') : !0;
             } else {
                 $self.html('Рассширенный поиск');
-                ($searchClearButton.length) ? $searchClearButton.removeClass('is-visible') : !0;
             }
         });
     }());
