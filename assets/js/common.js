@@ -231,6 +231,7 @@ $(document).ready(function () {
                 var itemsInRow = itemsCount,
                     itemWidth = contentWidth / itemsInRow;
 
+                console.log(itemWidth);
 
                 scope.height(5 * itemWidth);
                 var squareLogoWidth = ($(window).width() > 660) ? (itemsInRow * itemWidth) / 3 : itemWidth * 3;
@@ -248,6 +249,7 @@ $(document).ready(function () {
                     contentWidth = ($(window).width() > 760) ? $(window).width() - $('.content-aside').width() : $(window).width();
 
                 if (windowWidth > 660) {
+                    console.log(peopleWrap);
                     calculatePeopleSquare(peopleWrap, 15, contentWidth);
                 } else if (windowWidth <= 660 && windowWidth > 300) {
                     calculatePeopleSquare(peopleWrap, 5, contentWidth);
@@ -439,7 +441,7 @@ $(document).ready(function () {
 
             var selectedItems = inputHidden.val().split(',');
 
-            for (var i = selectedItems.length - 1; i >= 0; i--) {
+            for (var i = selectedItems.length; i >= 0; i--) {
                 console.log();
                 if (selectedItems[i] === selRemoveVal) {
                     selectedItems.splice(i, 1);
@@ -453,10 +455,11 @@ $(document).ready(function () {
 
             //remove Item
             $self.parents('.input-group').find(".js-select-multiple option[value='" + selRemoveVal + "']").prop('disabled', false);
+            $self.parents('.input-group').find(".js-select-multiple").val("")
 
 
             $self.parents('.input-group').find(".js-select-multiple").trigger("chosen:updated");
-
+            console.log($('#test-id').val());
             $self.parent().remove();
         });
     }());
