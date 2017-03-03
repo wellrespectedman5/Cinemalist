@@ -231,7 +231,7 @@ $(document).ready(function () {
                 var itemsInRow = itemsCount,
                     itemWidth = contentWidth / itemsInRow;
 
-                console.log(itemWidth);
+                console.log(itemWidth, contentWidth);
 
                 scope.height(5 * itemWidth);
                 var squareLogoWidth = ($(window).width() > 660) ? (itemsInRow * itemWidth) / 3 : itemWidth * 3;
@@ -246,10 +246,10 @@ $(document).ready(function () {
             var peopleSquare = (function checkSquare() {
                 var peopleWrap = square.parent(),
                     windowWidth = $(window).width(),
-                    contentWidth = ($(window).width() > 760) ? $(window).width() - $('.content-aside').width() : $(window).width();
+                    contentWidth = ($(window).width() > 760) ? $(window).outerWidth() - $('.content-aside').outerWidth() : $(window).width();
 
                 if (windowWidth > 660) {
-                    console.log(peopleWrap);
+
                     calculatePeopleSquare(peopleWrap, 15, contentWidth);
                 } else if (windowWidth <= 660 && windowWidth > 300) {
                     calculatePeopleSquare(peopleWrap, 5, contentWidth);
