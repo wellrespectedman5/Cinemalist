@@ -6,6 +6,28 @@ $(document).ready(function () {
         $(".phone-validation").mask("+7 (999) 999-9999");
     });
 
+    //Custom gallery init.
+    (function () {
+        var galleryLinkClass = '.js-gallery-open',
+            $gallery = $('.gallery');
+        if ($(galleryLinkClass).length && $gallery.length) {
+            //Gallery link click functional
+            $(document).on('click', galleryLinkClass, function (e) {
+                e.preventDefault();
+                var $self = $(this),
+                    galleryPath = $self.attr('href');
+                //get gallery-DOM-position from link galleryPath
+                var galleryCurrentLink = $(galleryPath).find('.gallery-link:first-child');
+                console.log(galleryCurrentLink);
+                galleryCurrentLink.click();
+            });
+            $gallery.lightGallery({
+                loop: false,
+                mousewheel: false
+            });
+        }
+    }());
+
     //Profile popup social list
     (function () {
         var popupSocialLink = $('.js-social-popup');

@@ -21,13 +21,14 @@
     <meta name="HandheldFriendly" content="True"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!-- <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="favicon.ico" rel="icon" type="image/vnd.microsoft.icon"> -->
     <link rel="stylesheet" href="components/custom-tooltips/tipso.min.css"/>
     <link rel="stylesheet" href="components/custom-select/chosen.css"/>
     <link rel="stylesheet" href="components/popupbox/source/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="components/custom-gallery/css/lightgallery.min.css"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
 
     <script type="text/javascript">
@@ -136,9 +137,16 @@
                                         <!-- BEGIN edit-column -->
                                         <div class="edit-column">
                                             <div class="input-group">
+                                                <!--<label>Уже есть инвайт?</label>-->
+                                                <!--<input type="text" placeholder="Инвайт*" >-->
+                                                <!--<a href="#" class="button button&#45;&#45;black">Активировать</a>-->
                                                 <label>Уже есть инвайт?</label>
-                                                <input type="text" placeholder="Инвайт*">
-                                                <a href="#" class="button button--black">Активировать</a>
+                                                <div class="form-group field-activeinviteform-code required has-error">
+                                                    <input type="text" id="activeinviteform-code" class="form-control"
+                                                           name="ActiveInviteForm[code]" placeholder="Инвайт"
+                                                           aria-required="true" aria-invalid="true">
+                                                    <div class="help-block">Code cannot be blank.</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- END edit-column ヽ(•‿•)ノ -->
@@ -445,10 +453,14 @@
                                                 <label>Специализация *</label>
                                                 <select data-placeholder="Добавить специализацию"
                                                         class="custom-it custom--black js-select-multiple"
-                                                        name="some-name">
+                                                        name="some-name" id="test-id">
                                                     <option selected disabled>Выберите специализацию</option>
                                                     <option value="1">Режиссёр</option>
                                                     <option value="2">Сценарист</option>
+                                                    <option value="3">Сценарист</option>
+                                                    <option value="4">Сценарист</option>
+                                                    <option value="5">Сценарист</option>
+                                                    <option value="6">Сценарист</option>
                                                 </select>
                                             </div>
                                             <div class="input-group">
@@ -1120,22 +1132,246 @@
                 // Function that check window size / restyle sidebar and content body
                 checkSidebar();
             </script>
-            <div class="container-fluid aside aside--full">
-                <!-- Begin aside-login -->
-                <!--<div class="login-section">-->
-                <!--<p>Зарегистрируйтесь и вам станет доступен полный функционал сайта. Вы сможете добавлять анкеты в-->
-                <!--избранное, делать заметки и отправлять списки избранного вашим коллегам.</p>-->
-                <!--<div class="login-section__bottom">-->
-                <!--<a href="#" class="button button&#45;&#45;transparent">Вход</a>-->
-                <!--<a href="#" class="button button&#45;&#45;white">Регистрация</a>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!-- End aside-login -->
-                <br>
-                <!-- Begin account-section -->
-                <div class="account-section">
-                    <!-- Begin account__user -->
-                    <div class="account__user">
+            <div class="content-aside-wrapper">
+                <div class="container-fluid aside aside--full">
+                    <br>
+                    <!-- Begin account-section -->
+                    <div class="account-section">
+                        <!-- Begin account__user -->
+                        <div class="account__user">
+                            <div class="user__picture">
+                                <a href="#" class="user__link">
+                                    <img src="images/bgs/account-face.png" alt="">
+                                    <span class="user__status status--away"></span>
+                                    <!--<span class="user__status status--online"></span>-->
+                                    <!--<span class="user__status status--notdistrub"></span>-->
+                                    <!--<span class="user__status status--offline"></span>-->
+                                </a>
+                            </div>
+                            <div class="user__info">
+                                <div class="user__statusinfo">
+                                    <span>Мой статус:</span>
+                                    <p>Рассмотрю предложения</p>
+                                </div>
+        
+                                <a href="#" class="account__exit">Выйти</a>
+                            </div>
+        
+                            <!-- BEGIN aside--close -->
+                            <a href="#" class="aside--close js-aside-full">a</a>
+                            <!-- END aside--close ヽ(•‿•)ノ -->
+                        </div>
+                        <!-- End account__user -->
+                        <div class="account__actions">
+                            <div class="action__item action--favorite">
+                                <a href="#" class="account__link">
+                                    <div class="action__icon">
+                                        <svg width="27px" height="24px" viewBox="37 13 27 24" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="heart-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                               transform="translate(37.000000, 13.000000)">
+                                                <path d="M24.7619049,7.59920622 C24.7619049,6.79563467 24.6552578,6.08630933 24.4419644,5.47123022 C24.2286702,4.85615111 23.9558533,4.36755911 23.623512,4.005456 C23.2911707,3.64335289 22.8869049,3.34821422 22.4107147,3.12004 C21.9345236,2.89186489 21.4682542,2.73809511 21.0119049,2.65872978 C20.5555556,2.57936533 20.0694444,2.53968267 19.5535716,2.53968267 C19.0376987,2.53968267 18.4821431,2.66617067 17.8869049,2.91914667 C17.2916667,3.17212267 16.743552,3.48958311 16.2425591,3.871528 C15.7415671,4.253472 15.3124996,4.61061511 14.9553573,4.94295644 C14.5982142,5.27529778 14.3005956,5.58035733 14.0624996,5.85813511 C13.8839289,6.07638933 13.6408729,6.18551556 13.3333333,6.18551556 C13.0257938,6.18551556 12.7827378,6.07638933 12.6041671,5.85813511 C12.3660711,5.58035733 12.0684524,5.27529778 11.7113093,4.94295644 C11.3541671,4.61061511 10.9250996,4.253472 10.4241076,3.871528 C9.92311467,3.48958311 9.375,3.17212267 8.77976178,2.91914667 C8.18452356,2.66617067 7.628968,2.53968267 7.11309511,2.53968267 C6.59722222,2.53968267 6.11111111,2.57936533 5.65476178,2.65872978 C5.19841244,2.73809511 4.73214311,2.89186489 4.255952,3.12004 C3.77976178,3.34821422 3.375496,3.64335289 3.04315467,4.005456 C2.71081333,4.36755911 2.43799644,4.85615111 2.22470222,5.47123022 C2.01140889,6.08630933 1.90476178,6.79563467 1.90476178,7.59920622 C1.90476178,9.26587289 2.83234133,11.0267858 4.68750044,12.8819449 L13.3333333,21.2152782 L21.9642853,12.8968258 C23.8293653,11.0317458 24.7619049,9.26587289 24.7619049,7.59920622 L24.7619049,7.59920622 Z M26.6666667,7.59920622 C26.6666667,9.79166667 25.5307538,12.0238098 23.2589289,14.2956347 L13.9880951,23.2242062 C13.8095236,23.4027778 13.5912702,23.4920631 13.3333333,23.4920631 C13.0753964,23.4920631 12.8571431,23.4027778 12.6785716,23.2242062 L3.39285689,14.2658729 C3.29365067,14.1865076 3.15724178,14.0575396 2.98363111,13.878968 C2.81001956,13.7003964 2.53472178,13.375496 2.15773778,12.9042658 C1.78075378,12.4330356 1.44345244,11.9494044 1.14583289,11.4533733 C0.848214222,10.9573413 0.582837333,10.3571431 0.349702222,9.65277778 C0.116567111,8.94841244 0,8.26388889 0,7.59920622 C0,5.41666667 0.62996,3.71031733 1.88988089,2.48015911 C3.14980178,1.25 4.89087289,0.634920889 7.11309511,0.634920889 C7.72817422,0.634920889 8.35565511,0.741567111 8.995536,0.954861333 C9.63541689,1.16815467 10.2306551,1.45585333 10.7812498,1.81795644 C11.3318453,2.18005956 11.8055556,2.51984089 12.2023813,2.83730133 C12.5992062,3.15476178 12.9761902,3.49206311 13.3333333,3.84920622 C13.6904764,3.49206311 14.0674604,3.15476178 14.4642853,2.83730133 C14.8611111,2.51984089 15.3348213,2.18005956 15.8854169,1.81795644 C16.4360116,1.45585333 17.0312498,1.16815467 17.6711307,0.954861333 C18.3110116,0.741567111 18.9384924,0.634920889 19.5535716,0.634920889 C21.7757938,0.634920889 23.5168649,1.25 24.7767858,2.48015911 C26.0367067,3.71031733 26.6666667,5.41666667 26.6666667,7.59920622 L26.6666667,7.59920622 Z"
+                                                      fill="#FFFFFF"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <span class="action__value">Моё избранное</span>
+                                </a>
+                            </div>
+                            <div class="action__item action--notification">
+                                <a href="#" class="account__link">
+                                    <div class="action__icon">
+                                        <svg width="24px" height="26px" viewBox="38 12 24 26" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="bell-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                               transform="translate(38.000000, 12.000000)">
+                                                <path d="M11.9665897,24.052995 C11.9665897,23.9032258 11.8917047,23.8283408 11.7419355,23.8283408 C11.1896603,23.8283408 10.7146101,23.6294282 10.3167841,23.231603 C9.9189589,22.833777 9.72004632,22.3587268 9.72004632,21.8064516 C9.72004632,21.6566824 9.64516129,21.5817974 9.49539206,21.5817974 C9.345622,21.5817974 9.27073697,21.6566824 9.27073697,21.8064516 C9.27073697,22.4897752 9.5117729,23.072473 9.99384394,23.5545432 C10.4759141,24.0366142 11.0586119,24.2776501 11.7419355,24.2776501 C11.8917047,24.2776501 11.9665897,24.2027651 11.9665897,24.052995 L11.9665897,24.052995 Z M2.61535174,20.0092167 L20.8685192,20.0092167 C18.3785999,17.2010372 17.1336402,13.3070273 17.1336402,8.32718858 C17.1336402,7.84979839 17.0213135,7.35836735 16.7966592,6.85289465 C16.572005,6.34742194 16.249064,5.86535174 15.8278372,5.40668239 C15.4066103,4.94801303 14.8379534,4.57124871 14.1218681,4.27638942 C13.405782,3.98153097 12.6124708,3.83410174 11.7419355,3.83410174 C10.8714001,3.83410174 10.078089,3.98153097 9.36200284,4.27638942 C8.64591755,4.57124871 8.07726065,4.94801303 7.65603381,5.40668239 C7.23480697,5.86535174 6.911866,6.34742194 6.68721174,6.85289465 C6.46255748,7.35836735 6.35023077,7.84979839 6.35023077,8.32718858 C6.35023077,13.3070273 5.1052711,17.2010372 2.61535174,20.0092167 L2.61535174,20.0092167 Z M23.4239628,20.0092167 C23.4239628,20.4959677 23.2461119,20.9171946 22.8904092,21.2728972 C22.5347066,21.6285999 22.1134789,21.8064516 21.6267279,21.8064516 L15.3364053,21.8064516 C15.3364053,22.7986754 14.9853835,23.645809 14.2833382,24.3478543 C13.5812929,25.0498996 12.7341592,25.4009214 11.7419355,25.4009214 C10.7497117,25.4009214 9.90257806,25.0498996 9.20053277,24.3478543 C8.49848748,23.645809 8.14746568,22.7986754 8.14746568,21.8064516 L1.8571431,21.8064516 C1.37039206,21.8064516 0.949164387,21.6285999 0.593461742,21.2728972 C0.237759097,20.9171946 0.0599081935,20.4959677 0.0599081935,20.0092167 C0.527937548,19.6160715 0.953845226,19.2042047 1.33762955,18.7736179 C1.72141387,18.3430302 2.11923987,17.7837341 2.53110587,17.0957305 C2.94297271,16.4077261 3.29165452,15.6658983 3.57715297,14.8702479 C3.86265142,14.0745968 4.09666652,13.1104547 4.27919826,11.9778226 C4.46172916,10.8451905 4.55299503,9.62831245 4.55299503,8.32718858 C4.55299503,6.904378 5.10059026,5.58219329 6.19578071,4.36063529 C7.29097032,3.13907729 8.72782258,2.39724948 10.5063366,2.13515271 C10.4314516,1.95730097 10.3940091,1.77476923 10.3940091,1.58755748 C10.3940091,1.213134 10.5250575,0.894873032 10.7871543,0.632776258 C11.049251,0.370679484 11.3675112,0.239631097 11.7419355,0.239631097 C12.1163598,0.239631097 12.4346199,0.370679484 12.6967167,0.632776258 C12.9588135,0.894873032 13.0898619,1.213134 13.0898619,1.58755748 C13.0898619,1.77476923 13.0524194,1.95730097 12.9775343,2.13515271 C14.7560484,2.39724948 16.1929006,3.13907729 17.2880903,4.36063529 C18.3832807,5.58219329 18.9308759,6.904378 18.9308759,8.32718858 C18.9308759,9.62831245 19.0221418,10.8451905 19.2046727,11.9778226 C19.3872045,13.1104547 19.6212195,14.0745968 19.906718,14.8702479 C20.1922165,15.6658983 20.5408983,16.4077261 20.9527651,17.0957305 C21.3646311,17.7837341 21.7624571,18.3430302 22.1462414,18.7736179 C22.5300257,19.2042047 22.9559334,19.6160715 23.4239628,20.0092167 L23.4239628,20.0092167 Z"
+                                                      fill="#FFFFFF"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <span class="action__value">Мои уведомления</span>
+        
+                                    <!-- Begin notification-value -->
+                                    <div class="notification-value js-little-popup">
+                                        <i>22</i>
+        
+                                        <div class="notification-popup">
+                                            <p>Отметить просмотренными</p>
+                                        </div>
+                                    </div>
+                                    <!-- End notification-value -->
+        
+                                </a>
+                            </div>
+                            <div class="action__item action--views">
+                                <a href="#" class="account__link">
+                                    <div class="action__icon">
+                                        <svg width="27px" height="18px" viewBox="37 16 27 18" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="eye" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                               transform="translate(37.000000, 16.000000)">
+                                                <path d="M25.0714287,9.0642861 C23.5446426,6.69375 21.6311382,4.9208706 19.3309155,3.745647 C19.9436382,4.7902905 20.25,5.9203125 20.25,7.1357139 C20.25,8.9939736 19.5895647,10.5835383 18.2686941,11.9044089 C16.9478235,13.2252786 15.3582588,13.8857139 13.5,13.8857139 C11.6417412,13.8857139 10.0521765,13.2252786 8.7313059,11.9044089 C7.4104353,10.5835383 6.75,8.9939736 6.75,7.1357139 C6.75,5.9203125 7.0563618,4.7902905 7.6690845,3.745647 C5.3688618,4.9208706 3.4553574,6.69375 1.9285713,9.0642861 C3.2645088,11.1234375 4.9394529,12.7632258 6.9534036,13.9836492 C8.9673552,15.2040735 11.1495537,15.8142861 13.5,15.8142861 C15.8504463,15.8142861 18.0326448,15.2040735 20.0465964,13.9836492 C22.0605471,12.7632258 23.7354912,11.1234375 25.0714287,9.0642861 L25.0714287,9.0642861 Z M14.2232139,3.2785713 C14.2232139,3.0776787 14.1529014,2.9069199 14.0122764,2.7662949 C13.8716514,2.6256699 13.7008926,2.5553574 13.5,2.5553574 C12.2444199,2.5553574 11.1671316,3.0048552 10.268136,3.9038508 C9.3691404,4.8028464 8.9196426,5.8801338 8.9196426,7.1357139 C8.9196426,7.3366074 8.9899551,7.5073662 9.1305801,7.6479912 C9.2712051,7.7886162 9.4419639,7.8589287 9.6428574,7.8589287 C9.84375,7.8589287 10.0145088,7.7886162 10.1551338,7.6479912 C10.2957588,7.5073662 10.3660713,7.3366074 10.3660713,7.1357139 C10.3660713,6.271875 10.6724331,5.5335942 11.2851558,4.9208706 C11.8978794,4.308147 12.6361611,4.0017861 13.5,4.0017861 C13.7008926,4.0017861 13.8716514,3.9314736 14.0122764,3.7908486 C14.1529014,3.6502236 14.2232139,3.4794639 14.2232139,3.2785713 L14.2232139,3.2785713 Z M27,9.0642861 C27,9.4058037 26.8995537,9.7523442 26.6986611,10.1039058 C25.2924111,12.4141743 23.4015066,14.2648992 21.0259485,15.6560823 C18.6503904,17.0472654 16.1417412,17.7428574 13.5,17.7428574 C10.8582588,17.7428574 8.3496096,17.0447544 5.9740515,15.6485493 C3.5984934,14.2523442 1.7075889,12.4041294 0.3013389,10.1039058 C0.1004463,9.7523442 0,9.4058037 0,9.0642861 C0,8.7227676 0.1004463,8.376228 0.3013389,8.0246655 C1.7075889,5.7244419 3.5984934,3.876228 5.9740515,2.480022 C8.3496096,1.0838169 10.8582588,0.3857139 13.5,0.3857139 C16.1417412,0.3857139 18.6503904,1.0838169 21.0259485,2.480022 C23.4015066,3.876228 25.2924111,5.7244419 26.6986611,8.0246655 C26.8995537,8.376228 27,8.7227676 27,9.0642861 L27,9.0642861 Z"
+                                                      fill="#FFFFFF"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <span class="action__value">Меня смотрели</span>
+                                    <span class="notification-value">15</span>
+        
+                                    <!-- Begin notification-value -->
+                                    <div class="notification-value js-little-popup">
+                                        <i>22</i>
+        
+                                        <div class="notification-popup">
+                                            <p>Отметить просмотренными</p>
+                                        </div>
+                                    </div>
+                                    <!-- End notification-value -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End account-section -->
+                    <!-- Begin aside-search -->
+                    <div class="aside-search">
+                        <div class="aside-search__title">
+                            <p>Искать специалистов:</p>
+                        </div>
+                        <div class="aside-search__body">
+                            <form method="POST" action="/">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Ключевое слово">
+                                </div>
+                                <div class="input-group">
+                                    <select class="custom-it search-field first-option-selected">
+                                        <option value="Выберите цех" selected>Выберите цех</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <select class="custom-it search-field first-option-selected">
+                                        <option value="Выберите специализацию" selected>Выберите специализацию</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <select class="custom-it search-field first-option-selected">
+                                        <option value="Выберите цех" selected>Выберите город</option>
+                                        <option value="Санкт-Питербург">Санкт-Питербург</option>
+                                        <option value="Москва">Москва</option>
+                                        <option value="Екатеренбург">Екатеренбург</option>
+                                    </select>
+                                </div>
+                                <!-- Begin additional-group -->
+                                <div class="additional-group">
+                                    <!--add to parent(additional-group .is-open class) and toggle extended-group-->
+                                    <div class="extended-group">
+                                        <!-- Begin checkbox-group -->
+                                        <div class="checkbox-group">
+                                            <p>Статус</p>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Свободен</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Рассмотрю предложения</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Занят</span>
+                                            </label>
+                                        </div>
+                                        <!-- End checkbox-group -->
+                                        <!-- Begin checkbox-group -->
+                                        <div class="checkbox-group">
+                                            <p>Готовность к командировкам</p>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Не готов</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Готов до 1 месяца</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">от 1 до 3 месяцев</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Более 3 месяцев</span>
+                                            </label>
+                                        </div>
+                                        <!-- End checkbox-group -->
+                                        <!-- Begin checkbox-group -->
+                                        <div class="checkbox-group">
+                                            <p>Условия сотрудничества</p>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Коммерция</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Повышение квалификации</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Студенческий проект</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Благотворительность</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">TFP (для портфолио)</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Другое</span>
+                                            </label>
+                                        </div>
+                                        <!-- End checkbox-group -->
+                                        <!-- Begin checkbox-group -->
+                                        <div class="checkbox-group">
+                                            <p>Опыт работы</p>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">Нет опыта</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">от 1 года до 3 лет</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">от 3 до 6 лет</span>
+                                            </label>
+                                            <label class="checkbox-wrap">
+                                                <input type="checkbox" value="some-value">
+                                                <span class="checkbox-square">более 6 лет</span>
+                                            </label>
+                                        </div>
+                                        <!-- End checkbox-group -->
+                                    </div>
+                                    <a href="#" class="js-extended-search simple-link">Расширенный поиск</a>
+                                </div>
+                                <!-- End additional-group -->
+                                <input type="submit" class="button button--transparent-yellow" value="Искать">
+                                <a href="#" class="simple-link js-search-clear">Очистить фильтр</a>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End aside-search -->
+                </div>
+                <div class="container-fluid aside aside--min">
+                    <div class="state state--compact">
                         <div class="user__picture">
                             <a href="#" class="user__link">
                                 <img src="images/bgs/account-face.png" alt="">
@@ -1145,21 +1381,6 @@
                                 <!--<span class="user__status status--offline"></span>-->
                             </a>
                         </div>
-                        <div class="user__info">
-                            <div class="user__statusinfo">
-                                <span>Мой статус:</span>
-                                <p>Рассмотрю предложения</p>
-                            </div>
-        
-                            <a href="#" class="account__exit">Выйти</a>
-                        </div>
-        
-                        <!-- BEGIN aside--close -->
-                        <a href="#" class="aside--close js-aside-full">a</a>
-                        <!-- END aside--close ヽ(•‿•)ノ -->
-                    </div>
-                    <!-- End account__user -->
-                    <div class="account__actions">
                         <div class="action__item action--favorite">
                             <a href="#" class="account__link">
                                 <div class="action__icon">
@@ -1172,7 +1393,6 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="action__value">Моё избранное</span>
                             </a>
                         </div>
                         <div class="action__item action--notification">
@@ -1187,18 +1407,6 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="action__value">Мои уведомления</span>
-        
-                                <!-- Begin notification-value -->
-                                <div class="notification-value js-little-popup">
-                                    <i>22</i>
-        
-                                    <div class="notification-popup">
-                                        <p>Отметить просмотренными</p>
-                                    </div>
-                                </div>
-                                <!-- End notification-value -->
-        
                             </a>
                         </div>
                         <div class="action__item action--views">
@@ -1213,227 +1421,23 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="action__value">Меня смотрели</span>
-                                <span class="notification-value">15</span>
-        
-                                <!-- Begin notification-value -->
-                                <div class="notification-value js-little-popup">
-                                    <i>22</i>
-        
-                                    <div class="notification-popup">
-                                        <p>Отметить просмотренными</p>
-                                    </div>
+                            </a>
+                        </div>
+                        <div class="action__item action--search">
+                            <a href="#" class="account__link js-aside-full">
+                                <div class="action__icon">
+                                    <svg width="24px" height="24px" viewBox="18 18 24 24" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M34.6153843,28.1538462 C34.6153843,26.3750001 33.9831727,24.8533655 32.7187496,23.5889423 C31.4543265,22.3245191 29.9326919,21.6923076 28.1538459,21.6923076 C26.3749998,21.6923076 24.8533653,22.3245191 23.5889421,23.5889423 C22.324519,24.8533655 21.6923074,26.3750001 21.6923074,28.1538462 C21.6923074,29.9326923 22.324519,31.4543269 23.5889421,32.7187501 C24.8533653,33.9831733 26.3749998,34.6153849 28.1538459,34.6153849 C29.9326919,34.6153849 31.4543265,33.9831733 32.7187496,32.7187501 C33.9831727,31.4543269 34.6153843,29.9326923 34.6153843,28.1538462 Z M42,40.1538462 C42,40.6538461 41.8173073,41.0865392 41.4519228,41.4519237 C41.0865383,41.8173082 40.6538462,42 40.1538463,42 C39.6346152,42 39.201923,41.8173082 38.8557689,41.4519237 L33.9086539,36.5192307 C32.1875,37.7115388 30.2692303,38.3076924 28.1538459,38.3076924 C26.778846,38.3076924 25.4639419,38.0408654 24.2091344,37.507212 C22.9543269,36.9735579 21.8725964,36.2524036 20.9639421,35.3437502 C20.0552887,34.4350959 19.3341345,33.3533654 18.8004804,32.0985578 C18.2668271,30.8437503 18,29.5288461 18,28.1538462 C18,26.7788463 18.2668271,25.4639421 18.8004804,24.2091346 C19.3341345,22.954327 20.0552887,21.8725957 20.9639421,20.9639422 C21.8725964,20.0552879 22.9543269,19.3341346 24.2091344,18.8004804 C25.4639419,18.2668262 26.778846,18 28.1538459,18 C29.5288457,18 30.8437498,18.2668262 32.0985573,18.8004804 C33.3533657,19.3341346 34.4350962,20.0552879 35.3437496,20.9639422 C36.2524038,21.8725957 36.9735572,22.954327 37.5072113,24.2091346 C38.0408655,25.4639421 38.3076926,26.7788463 38.3076926,28.1538462 C38.3076926,30.2692308 37.7115381,32.1874996 36.5192309,33.9086537 L41.4663458,38.8557696 C41.8221156,39.2115385 42,39.6442307 42,40.1538462 Z"
+                                              stroke="none" fill="#000000" fill-rule="evenodd"></path>
+                                    </svg>
                                 </div>
-                                <!-- End notification-value -->
                             </a>
                         </div>
                     </div>
-                </div>
-                <!-- End account-section -->
-                <!-- Begin aside-search -->
-                <div class="aside-search">
-                    <div class="aside-search__title">
-                        <p>Искать специалистов:</p>
+                    <div class="state state--full">
+                        <!-- aside full state -->
                     </div>
-                    <div class="aside-search__body">
-                        <form method="POST" action="/">
-                            <div class="input-group">
-                                <input type="text" placeholder="Ключевое слово">
-                            </div>
-                            <div class="input-group">
-                                <select class="custom-it search-field first-option-selected">
-                                    <option value="Выберите цех" selected>Выберите цех</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </div>
-                            <div class="input-group">
-                                <select class="custom-it search-field first-option-selected">
-                                    <option value="Выберите специализацию" selected>Выберите специализацию</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </div>
-                            <div class="input-group">
-                                <select class="custom-it search-field first-option-selected">
-                                    <option value="Выберите цех" selected>Выберите город</option>
-                                    <option value="Санкт-Питербург">Санкт-Питербург</option>
-                                    <option value="Москва">Москва</option>
-                                    <option value="Екатеренбург">Екатеренбург</option>
-                                </select>
-                            </div>
-                            <!-- Begin additional-group -->
-                            <div class="additional-group">
-                                <!--add to parent(additional-group .is-open class) and toggle extended-group-->
-                                <div class="extended-group">
-                                    <!-- Begin checkbox-group -->
-                                    <div class="checkbox-group">
-                                        <p>Статус</p>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Свободен</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Рассмотрю предложения</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Занят</span>
-                                        </label>
-                                    </div>
-                                    <!-- End checkbox-group -->
-                                    <!-- Begin checkbox-group -->
-                                    <div class="checkbox-group">
-                                        <p>Готовность к командировкам</p>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Не готов</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Готов до 1 месяца</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">от 1 до 3 месяцев</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Более 3 месяцев</span>
-                                        </label>
-                                    </div>
-                                    <!-- End checkbox-group -->
-                                    <!-- Begin checkbox-group -->
-                                    <div class="checkbox-group">
-                                        <p>Условия сотрудничества</p>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Коммерция</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Повышение квалификации</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Студенческий проект</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Благотворительность</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">TFP (для портфолио)</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Другое</span>
-                                        </label>
-                                    </div>
-                                    <!-- End checkbox-group -->
-                                    <!-- Begin checkbox-group -->
-                                    <div class="checkbox-group">
-                                        <p>Опыт работы</p>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">Нет опыта</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">от 1 года до 3 лет</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">от 3 до 6 лет</span>
-                                        </label>
-                                        <label class="checkbox-wrap">
-                                            <input type="checkbox" value="some-value">
-                                            <span class="checkbox-square">более 6 лет</span>
-                                        </label>
-                                    </div>
-                                    <!-- End checkbox-group -->
-                                </div>
-                                <a href="#" class="js-extended-search simple-link">Расширенный поиск</a>
-                            </div>
-                            <!-- End additional-group -->
-                            <input type="submit" class="button button--transparent-yellow" value="Искать">
-                            <a href="#" class="simple-link js-search-clear">Очистить фильтр</a>
-                        </form>
-                    </div>
-                </div>
-                <!-- End aside-search -->
-            </div>
-            <div class="container-fluid aside aside--min">
-                <div class="state state--compact">
-                    <div class="user__picture">
-                        <a href="#" class="user__link">
-                            <img src="images/bgs/account-face.png" alt="">
-                            <span class="user__status status--away"></span>
-                            <!--<span class="user__status status--online"></span>-->
-                            <!--<span class="user__status status--notdistrub"></span>-->
-                            <!--<span class="user__status status--offline"></span>-->
-                        </a>
-                    </div>
-                    <div class="action__item action--favorite">
-                        <a href="#" class="account__link">
-                            <div class="action__icon">
-                                <svg width="27px" height="24px" viewBox="37 13 27 24" version="1.1"
-                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g id="heart-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                       transform="translate(37.000000, 13.000000)">
-                                        <path d="M24.7619049,7.59920622 C24.7619049,6.79563467 24.6552578,6.08630933 24.4419644,5.47123022 C24.2286702,4.85615111 23.9558533,4.36755911 23.623512,4.005456 C23.2911707,3.64335289 22.8869049,3.34821422 22.4107147,3.12004 C21.9345236,2.89186489 21.4682542,2.73809511 21.0119049,2.65872978 C20.5555556,2.57936533 20.0694444,2.53968267 19.5535716,2.53968267 C19.0376987,2.53968267 18.4821431,2.66617067 17.8869049,2.91914667 C17.2916667,3.17212267 16.743552,3.48958311 16.2425591,3.871528 C15.7415671,4.253472 15.3124996,4.61061511 14.9553573,4.94295644 C14.5982142,5.27529778 14.3005956,5.58035733 14.0624996,5.85813511 C13.8839289,6.07638933 13.6408729,6.18551556 13.3333333,6.18551556 C13.0257938,6.18551556 12.7827378,6.07638933 12.6041671,5.85813511 C12.3660711,5.58035733 12.0684524,5.27529778 11.7113093,4.94295644 C11.3541671,4.61061511 10.9250996,4.253472 10.4241076,3.871528 C9.92311467,3.48958311 9.375,3.17212267 8.77976178,2.91914667 C8.18452356,2.66617067 7.628968,2.53968267 7.11309511,2.53968267 C6.59722222,2.53968267 6.11111111,2.57936533 5.65476178,2.65872978 C5.19841244,2.73809511 4.73214311,2.89186489 4.255952,3.12004 C3.77976178,3.34821422 3.375496,3.64335289 3.04315467,4.005456 C2.71081333,4.36755911 2.43799644,4.85615111 2.22470222,5.47123022 C2.01140889,6.08630933 1.90476178,6.79563467 1.90476178,7.59920622 C1.90476178,9.26587289 2.83234133,11.0267858 4.68750044,12.8819449 L13.3333333,21.2152782 L21.9642853,12.8968258 C23.8293653,11.0317458 24.7619049,9.26587289 24.7619049,7.59920622 L24.7619049,7.59920622 Z M26.6666667,7.59920622 C26.6666667,9.79166667 25.5307538,12.0238098 23.2589289,14.2956347 L13.9880951,23.2242062 C13.8095236,23.4027778 13.5912702,23.4920631 13.3333333,23.4920631 C13.0753964,23.4920631 12.8571431,23.4027778 12.6785716,23.2242062 L3.39285689,14.2658729 C3.29365067,14.1865076 3.15724178,14.0575396 2.98363111,13.878968 C2.81001956,13.7003964 2.53472178,13.375496 2.15773778,12.9042658 C1.78075378,12.4330356 1.44345244,11.9494044 1.14583289,11.4533733 C0.848214222,10.9573413 0.582837333,10.3571431 0.349702222,9.65277778 C0.116567111,8.94841244 0,8.26388889 0,7.59920622 C0,5.41666667 0.62996,3.71031733 1.88988089,2.48015911 C3.14980178,1.25 4.89087289,0.634920889 7.11309511,0.634920889 C7.72817422,0.634920889 8.35565511,0.741567111 8.995536,0.954861333 C9.63541689,1.16815467 10.2306551,1.45585333 10.7812498,1.81795644 C11.3318453,2.18005956 11.8055556,2.51984089 12.2023813,2.83730133 C12.5992062,3.15476178 12.9761902,3.49206311 13.3333333,3.84920622 C13.6904764,3.49206311 14.0674604,3.15476178 14.4642853,2.83730133 C14.8611111,2.51984089 15.3348213,2.18005956 15.8854169,1.81795644 C16.4360116,1.45585333 17.0312498,1.16815467 17.6711307,0.954861333 C18.3110116,0.741567111 18.9384924,0.634920889 19.5535716,0.634920889 C21.7757938,0.634920889 23.5168649,1.25 24.7767858,2.48015911 C26.0367067,3.71031733 26.6666667,5.41666667 26.6666667,7.59920622 L26.6666667,7.59920622 Z"
-                                              fill="#FFFFFF"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="action__item action--notification">
-                        <a href="#" class="account__link">
-                            <div class="action__icon">
-                                <svg width="24px" height="26px" viewBox="38 12 24 26" version="1.1"
-                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g id="bell-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                       transform="translate(38.000000, 12.000000)">
-                                        <path d="M11.9665897,24.052995 C11.9665897,23.9032258 11.8917047,23.8283408 11.7419355,23.8283408 C11.1896603,23.8283408 10.7146101,23.6294282 10.3167841,23.231603 C9.9189589,22.833777 9.72004632,22.3587268 9.72004632,21.8064516 C9.72004632,21.6566824 9.64516129,21.5817974 9.49539206,21.5817974 C9.345622,21.5817974 9.27073697,21.6566824 9.27073697,21.8064516 C9.27073697,22.4897752 9.5117729,23.072473 9.99384394,23.5545432 C10.4759141,24.0366142 11.0586119,24.2776501 11.7419355,24.2776501 C11.8917047,24.2776501 11.9665897,24.2027651 11.9665897,24.052995 L11.9665897,24.052995 Z M2.61535174,20.0092167 L20.8685192,20.0092167 C18.3785999,17.2010372 17.1336402,13.3070273 17.1336402,8.32718858 C17.1336402,7.84979839 17.0213135,7.35836735 16.7966592,6.85289465 C16.572005,6.34742194 16.249064,5.86535174 15.8278372,5.40668239 C15.4066103,4.94801303 14.8379534,4.57124871 14.1218681,4.27638942 C13.405782,3.98153097 12.6124708,3.83410174 11.7419355,3.83410174 C10.8714001,3.83410174 10.078089,3.98153097 9.36200284,4.27638942 C8.64591755,4.57124871 8.07726065,4.94801303 7.65603381,5.40668239 C7.23480697,5.86535174 6.911866,6.34742194 6.68721174,6.85289465 C6.46255748,7.35836735 6.35023077,7.84979839 6.35023077,8.32718858 C6.35023077,13.3070273 5.1052711,17.2010372 2.61535174,20.0092167 L2.61535174,20.0092167 Z M23.4239628,20.0092167 C23.4239628,20.4959677 23.2461119,20.9171946 22.8904092,21.2728972 C22.5347066,21.6285999 22.1134789,21.8064516 21.6267279,21.8064516 L15.3364053,21.8064516 C15.3364053,22.7986754 14.9853835,23.645809 14.2833382,24.3478543 C13.5812929,25.0498996 12.7341592,25.4009214 11.7419355,25.4009214 C10.7497117,25.4009214 9.90257806,25.0498996 9.20053277,24.3478543 C8.49848748,23.645809 8.14746568,22.7986754 8.14746568,21.8064516 L1.8571431,21.8064516 C1.37039206,21.8064516 0.949164387,21.6285999 0.593461742,21.2728972 C0.237759097,20.9171946 0.0599081935,20.4959677 0.0599081935,20.0092167 C0.527937548,19.6160715 0.953845226,19.2042047 1.33762955,18.7736179 C1.72141387,18.3430302 2.11923987,17.7837341 2.53110587,17.0957305 C2.94297271,16.4077261 3.29165452,15.6658983 3.57715297,14.8702479 C3.86265142,14.0745968 4.09666652,13.1104547 4.27919826,11.9778226 C4.46172916,10.8451905 4.55299503,9.62831245 4.55299503,8.32718858 C4.55299503,6.904378 5.10059026,5.58219329 6.19578071,4.36063529 C7.29097032,3.13907729 8.72782258,2.39724948 10.5063366,2.13515271 C10.4314516,1.95730097 10.3940091,1.77476923 10.3940091,1.58755748 C10.3940091,1.213134 10.5250575,0.894873032 10.7871543,0.632776258 C11.049251,0.370679484 11.3675112,0.239631097 11.7419355,0.239631097 C12.1163598,0.239631097 12.4346199,0.370679484 12.6967167,0.632776258 C12.9588135,0.894873032 13.0898619,1.213134 13.0898619,1.58755748 C13.0898619,1.77476923 13.0524194,1.95730097 12.9775343,2.13515271 C14.7560484,2.39724948 16.1929006,3.13907729 17.2880903,4.36063529 C18.3832807,5.58219329 18.9308759,6.904378 18.9308759,8.32718858 C18.9308759,9.62831245 19.0221418,10.8451905 19.2046727,11.9778226 C19.3872045,13.1104547 19.6212195,14.0745968 19.906718,14.8702479 C20.1922165,15.6658983 20.5408983,16.4077261 20.9527651,17.0957305 C21.3646311,17.7837341 21.7624571,18.3430302 22.1462414,18.7736179 C22.5300257,19.2042047 22.9559334,19.6160715 23.4239628,20.0092167 L23.4239628,20.0092167 Z"
-                                              fill="#FFFFFF"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="action__item action--views">
-                        <a href="#" class="account__link">
-                            <div class="action__icon">
-                                <svg width="27px" height="18px" viewBox="37 16 27 18" version="1.1"
-                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g id="eye" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                       transform="translate(37.000000, 16.000000)">
-                                        <path d="M25.0714287,9.0642861 C23.5446426,6.69375 21.6311382,4.9208706 19.3309155,3.745647 C19.9436382,4.7902905 20.25,5.9203125 20.25,7.1357139 C20.25,8.9939736 19.5895647,10.5835383 18.2686941,11.9044089 C16.9478235,13.2252786 15.3582588,13.8857139 13.5,13.8857139 C11.6417412,13.8857139 10.0521765,13.2252786 8.7313059,11.9044089 C7.4104353,10.5835383 6.75,8.9939736 6.75,7.1357139 C6.75,5.9203125 7.0563618,4.7902905 7.6690845,3.745647 C5.3688618,4.9208706 3.4553574,6.69375 1.9285713,9.0642861 C3.2645088,11.1234375 4.9394529,12.7632258 6.9534036,13.9836492 C8.9673552,15.2040735 11.1495537,15.8142861 13.5,15.8142861 C15.8504463,15.8142861 18.0326448,15.2040735 20.0465964,13.9836492 C22.0605471,12.7632258 23.7354912,11.1234375 25.0714287,9.0642861 L25.0714287,9.0642861 Z M14.2232139,3.2785713 C14.2232139,3.0776787 14.1529014,2.9069199 14.0122764,2.7662949 C13.8716514,2.6256699 13.7008926,2.5553574 13.5,2.5553574 C12.2444199,2.5553574 11.1671316,3.0048552 10.268136,3.9038508 C9.3691404,4.8028464 8.9196426,5.8801338 8.9196426,7.1357139 C8.9196426,7.3366074 8.9899551,7.5073662 9.1305801,7.6479912 C9.2712051,7.7886162 9.4419639,7.8589287 9.6428574,7.8589287 C9.84375,7.8589287 10.0145088,7.7886162 10.1551338,7.6479912 C10.2957588,7.5073662 10.3660713,7.3366074 10.3660713,7.1357139 C10.3660713,6.271875 10.6724331,5.5335942 11.2851558,4.9208706 C11.8978794,4.308147 12.6361611,4.0017861 13.5,4.0017861 C13.7008926,4.0017861 13.8716514,3.9314736 14.0122764,3.7908486 C14.1529014,3.6502236 14.2232139,3.4794639 14.2232139,3.2785713 L14.2232139,3.2785713 Z M27,9.0642861 C27,9.4058037 26.8995537,9.7523442 26.6986611,10.1039058 C25.2924111,12.4141743 23.4015066,14.2648992 21.0259485,15.6560823 C18.6503904,17.0472654 16.1417412,17.7428574 13.5,17.7428574 C10.8582588,17.7428574 8.3496096,17.0447544 5.9740515,15.6485493 C3.5984934,14.2523442 1.7075889,12.4041294 0.3013389,10.1039058 C0.1004463,9.7523442 0,9.4058037 0,9.0642861 C0,8.7227676 0.1004463,8.376228 0.3013389,8.0246655 C1.7075889,5.7244419 3.5984934,3.876228 5.9740515,2.480022 C8.3496096,1.0838169 10.8582588,0.3857139 13.5,0.3857139 C16.1417412,0.3857139 18.6503904,1.0838169 21.0259485,2.480022 C23.4015066,3.876228 25.2924111,5.7244419 26.6986611,8.0246655 C26.8995537,8.376228 27,8.7227676 27,9.0642861 L27,9.0642861 Z"
-                                              fill="#FFFFFF"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="action__item action--search">
-                        <a href="#" class="account__link js-aside-full">
-                            <div class="action__icon">
-                                <svg width="24px" height="24px" viewBox="18 18 24 24" version="1.1"
-                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path d="M34.6153843,28.1538462 C34.6153843,26.3750001 33.9831727,24.8533655 32.7187496,23.5889423 C31.4543265,22.3245191 29.9326919,21.6923076 28.1538459,21.6923076 C26.3749998,21.6923076 24.8533653,22.3245191 23.5889421,23.5889423 C22.324519,24.8533655 21.6923074,26.3750001 21.6923074,28.1538462 C21.6923074,29.9326923 22.324519,31.4543269 23.5889421,32.7187501 C24.8533653,33.9831733 26.3749998,34.6153849 28.1538459,34.6153849 C29.9326919,34.6153849 31.4543265,33.9831733 32.7187496,32.7187501 C33.9831727,31.4543269 34.6153843,29.9326923 34.6153843,28.1538462 Z M42,40.1538462 C42,40.6538461 41.8173073,41.0865392 41.4519228,41.4519237 C41.0865383,41.8173082 40.6538462,42 40.1538463,42 C39.6346152,42 39.201923,41.8173082 38.8557689,41.4519237 L33.9086539,36.5192307 C32.1875,37.7115388 30.2692303,38.3076924 28.1538459,38.3076924 C26.778846,38.3076924 25.4639419,38.0408654 24.2091344,37.507212 C22.9543269,36.9735579 21.8725964,36.2524036 20.9639421,35.3437502 C20.0552887,34.4350959 19.3341345,33.3533654 18.8004804,32.0985578 C18.2668271,30.8437503 18,29.5288461 18,28.1538462 C18,26.7788463 18.2668271,25.4639421 18.8004804,24.2091346 C19.3341345,22.954327 20.0552887,21.8725957 20.9639421,20.9639422 C21.8725964,20.0552879 22.9543269,19.3341346 24.2091344,18.8004804 C25.4639419,18.2668262 26.778846,18 28.1538459,18 C29.5288457,18 30.8437498,18.2668262 32.0985573,18.8004804 C33.3533657,19.3341346 34.4350962,20.0552879 35.3437496,20.9639422 C36.2524038,21.8725957 36.9735572,22.954327 37.5072113,24.2091346 C38.0408655,25.4639421 38.3076926,26.7788463 38.3076926,28.1538462 C38.3076926,30.2692308 37.7115381,32.1874996 36.5192309,33.9086537 L41.4663458,38.8557696 C41.8221156,39.2115385 42,39.6442307 42,40.1538462 Z"
-                                          stroke="none" fill="#000000" fill-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="state state--full">
-                    <!-- aside full state -->
                 </div>
             </div>
             <!-- End content-aside -->
@@ -1458,6 +1462,8 @@
 <script src="components/popupbox/source/jquery.fancybox.js" type="text/javascript"></script>
 <script src="components/swipe-lib/jquery.touchSwipe.min.js" type="text/javascript"></script>
 <script src="components/jquery/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="components/custom-gallery/js/lightgallery.min.js" type="text/javascript"></script>
+<script src="assets/js/_freeze-scrolling.js" type="text/javascript"></script>
 <script src="assets/js/common.js" type="text/javascript"></script>
 </body>
 
