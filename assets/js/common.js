@@ -1,5 +1,34 @@
 $(document).ready(function () {
 
+    //Clapperboard prev/next steps functional
+    (function () {
+        var nextClapperboardButtonClass = '.js-clapperboard-step-next',
+            prevClapperboardButtonClass = '.js-clapperboard-step-prev';
+        if ($(nextClapperboardButtonClass).length &&
+            $(prevClapperboardButtonClass).length) {
+            var clapperboardStep = $('.js-toggle-step'),
+                currentClapperboardStep = $('.js-toggle-step.is-active');
+
+            $(document).on('click', prevClapperboardButtonClass, function (e) {
+                e.preventDefault();
+                console.log(currentClapperboardStep.index());
+
+                if (currentClapperboardStep.index() !== 0) {
+                    clapperboardStep.eq(currentClapperboardStep.index() - 1).click();
+                }
+                currentClapperboardStep = $('.js-toggle-step.is-active');
+            });
+            $(document).on('click', nextClapperboardButtonClass, function (e) {
+                e.preventDefault();
+                console.log(currentClapperboardStep.index());
+                if (currentClapperboardStep.index() !== clapperboardStep.length) {
+                    clapperboardStep.eq(currentClapperboardStep.index() + 1).click();
+                }
+                currentClapperboardStep = $('.js-toggle-step.is-active');
+            });
+        }
+    }());
+
     //Masks for input with phone-number
     //Input masks
     jQuery(function ($) {
