@@ -6,25 +6,23 @@ $(document).ready(function () {
             prevClapperboardButtonClass = '.js-clapperboard-step-prev';
         if ($(nextClapperboardButtonClass).length &&
             $(prevClapperboardButtonClass).length) {
-            var clapperboardStep = $('.js-toggle-step'),
-                currentClapperboardStep = $('.js-toggle-step.is-active');
+            var clapperboardStep = $('.js-toggle-step');
 
             $(document).on('click', prevClapperboardButtonClass, function (e) {
                 e.preventDefault();
-                console.log(currentClapperboardStep.index());
+                var currentClapperboardStep = $('.js-toggle-step.is-active');
 
                 if (currentClapperboardStep.index() !== 0) {
                     clapperboardStep.eq(currentClapperboardStep.index() - 1).click();
                 }
-                currentClapperboardStep = $('.js-toggle-step.is-active');
             });
             $(document).on('click', nextClapperboardButtonClass, function (e) {
                 e.preventDefault();
-                console.log(currentClapperboardStep.index());
+                var currentClapperboardStep = $('.js-toggle-step.is-active');
+
                 if (currentClapperboardStep.index() !== clapperboardStep.length) {
                     clapperboardStep.eq(currentClapperboardStep.index() + 1).click();
                 }
-                currentClapperboardStep = $('.js-toggle-step.is-active');
             });
         }
     }());
