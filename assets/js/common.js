@@ -55,20 +55,6 @@ $(document).ready(function () {
         }
     }());
 
-    //Profile popup social list
-    (function () {
-        var popupSocialLink = $('.js-social-popup');
-        if (popupSocialLink.length) {
-            popupSocialLink.on('click', function (e) {
-                e.preventDefault();
-            });
-            popupSocialLink.on('hover', function () {
-
-            }, function () {
-
-            });
-        }
-    }());
     //Pinning blog/project functional
     (function () {
         $(document).on('click', '.js-pin-blog', function (e) {
