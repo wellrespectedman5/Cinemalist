@@ -432,7 +432,7 @@ $(document).ready(function () {
             changeTab($('.tabs__header-wrap'), 4);
 
             $('body,html').animate({
-                    'scrollTop': $('.tabs__header').offset().top
+                    'scrollTop': $('body').offset().top
                 },
                 300);
         });
