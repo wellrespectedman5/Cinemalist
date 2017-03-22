@@ -430,6 +430,11 @@ $(document).ready(function () {
             $('.tabs__header').children().eq(tabIndex + 1).find('.tabs__header-link').click();
 
             changeTab($('.tabs__header-wrap'), 4);
+
+            $('body,html').animate({
+                    'scrollTop': $('.tabs__header').offset().top
+                },
+                300);
         });
     }());
 
